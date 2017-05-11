@@ -1,9 +1,7 @@
 package physicsdemo.cows;
 
-import physicsdemo.GameObject;
-import physicsdemo.GameRect;
-import physicsdemo.InputManger;
-import physicsdemo.SpriteRenderer;
+import physicsdemo.*;
+import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 
@@ -36,11 +34,11 @@ public class Cow extends GameObject {
         dy += Physics2D.GRAVITY;
         isGrounded = false;
 
-        if (InputManger.getInstance().isRight()) {
+        if (InputManager.getInstance().isRight()) {
             dx += 5;
         }
 
-        if (InputManger.getInstance().isLeft()) {
+        if (InputManager.getInstance().isLeft()) {
             dx -= 5;
         }
 
@@ -53,11 +51,11 @@ public class Cow extends GameObject {
             while(gameRect.getBottom() + 1 < groundRect.getY()) {
                 gameRect.move(0, 1);
             }
-
-            isGrounded = true;
+            isGrounded=true;
         }
 
-        if (InputManger.getInstance().isUp() && isGrounded) {
+
+        if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
 

@@ -5,20 +5,20 @@ import java.awt.event.KeyEvent;
 /**
  * Created by trongphuong1011 on 5/10/2017.
  */
-public class InputManger {
+public class InputManager {
     private boolean right;
     private boolean left;
     private boolean up;
     private boolean down;
     private boolean space;
 
-    private static InputManger instance;
+    private static InputManager instance;
 
-    public static InputManger getInstance() {
+    public static InputManager getInstance() {
         return instance;
     }
 
-    public InputManger() {
+    public InputManager() {
         instance = this;
     }
 

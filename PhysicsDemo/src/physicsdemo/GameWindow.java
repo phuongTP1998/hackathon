@@ -1,6 +1,8 @@
 package physicsdemo;
 
 import physicsdemo.cows.Cow;
+import physicsdemo.gameScenes.GameScenes;
+import physicsdemo.gameScenes.MenuScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.utils.Utils;
 
@@ -19,18 +21,26 @@ public class GameWindow extends Frame {
     BufferedImage backBufferImage;
     Graphics backbufferGraphics;
 
-    InputManger inputManger;
+    InputManager inputManager;
+    GameScenes currentScene;
+    public static GameWindow instance;
+
+    public void setCurrentScene(GameScenes currentScene) {
+        this.currentScene = currentScene;
+    }
 
     public GameWindow() {
 
         setVisible(true);
-        setSize(400, 600);
-        inputManger = new InputManger();
+        setSize(1000, 700);
+        inputManager = new InputManager();
+        currentScene= new MenuScene();
+
 
         new Cow(new GameRect(10, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
-        new Ground(new GameRect(10, 500, 300, 300), new SpriteRenderer("res/Minh/run-right-1.png"));
+        new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
 
-        backBufferImage = new BufferedImage(400, 600, BufferedImage.TYPE_INT_ARGB);
+        backBufferImage = new BufferedImage(1000, 700, BufferedImage.TYPE_INT_ARGB);
         backbufferGraphics = backBufferImage.getGraphics();
 
         addWindowListener(new WindowListener() {
@@ -80,12 +90,12 @@ public class GameWindow extends Frame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                inputManger.keyPressed(e);
+                inputManager.keyPressed(e);
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                inputManger.keyReleased(e);
+                inputManager.keyReleased(e);
             }
         });
 
