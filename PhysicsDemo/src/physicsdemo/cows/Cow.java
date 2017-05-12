@@ -52,13 +52,37 @@ public class Cow extends GameObject {
                 gameRect.move(0, 1);
             }
             isGrounded=true;
-            if(gameObject instanceof Cow && gameRect.getRight() < groundRect.getX()){
-                dx=0;
-            }
+        }
+
+        GameObject gameObject1=GameObject.objectAt(gameRect.getRight()+dx, gameRect.getBottom());
+        if(gameObject1 !=null && gameObject1 instanceof Ground){
+            dx=0;
+            System.out.println(" 1");
+            isGrounded=true;
+        }
+
+        GameObject gameObject2=GameObject.objectAt(gameRect.getRight()+dx,gameRect.getY());
+        if(gameObject2 !=null && gameObject2 instanceof Ground){
+            dx=0;
+            System.out.println(" 2");
+            isGrounded=true;
+        }
+        GameObject gameObject3=GameObject.objectAt(gameRect.getX(),gameRect.getBottom());
+        if(gameObject3 !=null && gameObject3 instanceof Ground){
+            dx=0;
+            System.out.println(" 3");
+            isGrounded=true;
+        }
+
+        GameObject gameObject4=GameObject.objectAt(gameRect.getX()-dx,gameRect.getY());
+        if(gameObject4 !=null && gameObject4 instanceof Ground){
+            dx=0;
+            System.out.println(" 4");
+            isGrounded=true;
         }
 
         if (InputManager.getInstance().isUp() && isGrounded) {
-            dy = -30;
+            dy = -20;
         }
 
         gameRect.move(dx, dy);
