@@ -31,9 +31,10 @@ public class InputManager {
             up = true;
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             down = true;
-        } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            space = true;
         }
+//        else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+//           space = true;
+//        }
     }
 
     public void keyReleased(KeyEvent e) {
@@ -45,9 +46,10 @@ public class InputManager {
             up = false;
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             down = false;
-        } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            space = false;
-        }
+     }
+// else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+//           space = false;
+//     }
     }
 
     public boolean isRight() {
