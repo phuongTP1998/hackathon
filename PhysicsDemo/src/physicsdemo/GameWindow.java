@@ -37,10 +37,6 @@ public class GameWindow extends Frame {
         instance=this;
         currentScene= new MenuScene();
 
-
-//        new Cow(new GameRect(10, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
-//        new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
-
         backBufferImage = new BufferedImage(1000, 700, BufferedImage.TYPE_INT_ARGB);
         backbufferGraphics = backBufferImage.getGraphics();
 
@@ -92,11 +88,13 @@ public class GameWindow extends Frame {
             @Override
             public void keyPressed(KeyEvent e) {
                 currentScene.keyPressed(e);
+                inputManager.keyPressed(e);
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
                 currentScene.keyReleased(e);
+                inputManager.keyReleased(e);
             }
         });
 
@@ -109,8 +107,8 @@ public class GameWindow extends Frame {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    GameObject.updateAll();
                     currentScene.update();
-//                    GameObject.updateAll();
                     repaint();
                 }
             }
@@ -123,7 +121,7 @@ public class GameWindow extends Frame {
     @Override
     public void update(Graphics graphics) {
         currentScene.draw(backbufferGraphics);
-//        backbufferGraphics.drawImage(backgroundImage, 0, 0, null);
+        GameObject.drawAll(backbufferGraphics);
         graphics.drawImage(backBufferImage, 0, 0, null);
     }
 }

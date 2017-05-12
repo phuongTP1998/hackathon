@@ -44,6 +44,5 @@ public class MenuScene implements GameScenes {
     public void update() {
         background_1.update();
         background_2.update();
-
     }
 }
