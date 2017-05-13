@@ -116,10 +116,12 @@ public class Cow extends GameObject {
             isGrounded=true;
         }
 
+
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
 
+        Camera.instanse.x += dx;
         gameRect.move(dx, dy);
     }
 }

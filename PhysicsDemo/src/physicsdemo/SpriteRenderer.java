@@ -18,7 +18,7 @@ public class SpriteRenderer {
     }
     public void render(Graphics graphics, GameRect gameRect){
         graphics.drawImage(image,
-                gameRect.getX(),gameRect.getY(),
+                gameRect.getX() - Camera.instanse.x, gameRect.getY(),
                 gameRect.getWidth(),gameRect.getHeight(),
                 null);
     }
