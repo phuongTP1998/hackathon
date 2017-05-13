@@ -57,6 +57,8 @@ public class GameRect {
         return y + height;
     }
     public int getRight(){return x + width; }
+    public int getCenterX(){return x+ width/2;}
+    public int getCenterY(){return y+ height/2;}
 
     public GameRect translate(GameRect gameRect) {
         return new GameRect(this.x + gameRect.getX(), this.y + gameRect.y, gameRect.getWidth(), gameRect.getHeight());

@@ -26,6 +26,10 @@ public class GameObject {
         for (GameObject gameObject : gameObjects) {
             gameObject.update();
         }
+
+        for (GameObject gameObject : gameObjects) {
+            gameObject.lateUpdate();
+        }
     }
 
     public static void drawAll(Graphics graphics) {
@@ -58,6 +62,10 @@ public class GameObject {
     }
 
     public void update() {
+
+    }
+
+    public void lateUpdate() {
 
     }
 
