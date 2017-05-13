@@ -1,5 +1,6 @@
 package physicsdemo.view;
 
+import physicsdemo.Camera;
 import physicsdemo.GameRect;
 
 import java.awt.*;
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by trongphuong1011 on 5/13/2017.
  */
 public class Animation {
-    private java.util.List<Image> images;
+    private List<Image> images;
     private int imageIndex = 0;
     private int interval=10;
     private int time;
@@ -46,6 +47,6 @@ public class Animation {
         if(isOneTime&&hasEnded){
             return;
         }
-        graphics.drawImage(images.get(imageIndex),gameRect.getX(),gameRect.getY(),null);
+        graphics.drawImage(images.get(imageIndex),gameRect.getX()- Camera.instanse.x,gameRect.getY()+7,null);
     }
 }

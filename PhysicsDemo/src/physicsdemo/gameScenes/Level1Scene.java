@@ -24,7 +24,7 @@ private Clip clip;
         new Cow(new GameRect(500, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
         new EnemyController(new GameRect(500,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
-        new Ground(new GameRect(400,450,800,100),new SpriteRenderer("res/1.png"));
+        new Ground(new GameRect(400,350,800,100),new SpriteRenderer("res/1.png"));
         new Ground(new GameRect( 50,470,50,50),new SpriteRenderer("res/Object/Crate.png"));
 
         image= Utils.loadImage("res/background/background1.png");

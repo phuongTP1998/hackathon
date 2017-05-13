@@ -23,16 +23,16 @@ public class Cow extends GameObject {
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
-        ArrayList<Image> images= new ArrayList<Image>();
-        {
-            images.add(Utils.loadImage("res/Minh/run-right-1.png"));
-            images.add(Utils.loadImage("res/Minh/run-right-2.png"));
-            images.add(Utils.loadImage("res/Minh/run-right-3.png"));
-            images.add(Utils.loadImage("res/Minh/run-right-4.png"));
-        }
-        animation=new Animation(images);
         dx = 0;
         dy = 0;
+        ArrayList<Image> images = new ArrayList<Image>();
+            {
+                images.add(Utils.loadImage("res/Minh/run-right-1.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-2.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-3.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-4.png"));
+            }
+            animation = new Animation(images);
     }
 
     @Override
@@ -100,6 +100,28 @@ public class Cow extends GameObject {
         if(gameObjectRightTop !=null && gameObjectRightTop instanceof Ground){
             dx=0;
             System.out.println(" Right Top");
+        }
+
+        GameObject gameObjectLeftTop=GameObject.objectAt(gameRect.getX()+dx,gameRect.getY());
+        if(gameObjectLeftTop !=null && gameObjectLeftTop instanceof Ground){
+            dx=0;
+            System.out.println(" Left Top");
+        }
+
+        GameObject gameObjectLeftBottom=GameObject.objectAt(gameRect.getX()+dx,gameRect.getBottom());
+        if(gameObjectLeftBottom !=null && gameObjectLeftBottom instanceof Ground){
+            dx=0;
+            System.out.println(" Left Bottom");
+        }
+
+        GameObject gameObjectUpCenter=GameObject.objectAt(gameRect.getCenterX(),gameRect.getY()+dy);
+        if(gameObjectUpCenter !=null && gameObjectUpCenter instanceof Ground){
+            dy=0;
+            System.out.println(" Center Up");
+            GameRect groundRect = gameObjectCenterDown.getGameRect();
+            while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                gameRect.move(0, 1);
+            }
         }
 
 
