@@ -4,8 +4,11 @@ import physicsdemo.*;
 import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
+import physicsdemo.utils.Utils;
+import physicsdemo.view.Animation;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by trongphuong1011 on 5/10/2017.
@@ -16,16 +19,25 @@ public class Cow extends GameObject {
     private int dy;
 
     private boolean isGrounded;
+    private Animation animation;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
+        ArrayList<Image> images= new ArrayList<Image>();
+        {
+            images.add(Utils.loadImage("res/Minh/run-right-1.png"));
+            images.add(Utils.loadImage("res/Minh/run-right-2.png"));
+            images.add(Utils.loadImage("res/Minh/run-right-3.png"));
+            images.add(Utils.loadImage("res/Minh/run-right-4.png"));
+        }
+        animation=new Animation(images);
         dx = 0;
         dy = 0;
     }
 
     @Override
     public void draw(Graphics graphics) {
-        super.draw(graphics);
+        animation.draw(graphics,gameRect);
     }
 
     @Override
