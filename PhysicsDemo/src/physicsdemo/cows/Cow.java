@@ -54,6 +54,31 @@ public class Cow extends GameObject {
             isGrounded=true;
         }
 
+        gameObject = GameObject.objectAt(gameRect.getX() + gameRect.getWidth(), gameRect.getBottom() + dy);
+
+        if(gameObject != null && gameObject instanceof Ground) {
+            dy = 0;
+            GameRect groundRect = gameObject.getGameRect();
+
+            while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                gameRect.move(0, 1);
+            }
+            isGrounded=true;
+        }
+
+        gameObject = GameObject.objectAt(gameRect.getX() + gameRect.getWidth(), gameRect.getBottom() + dy);
+
+        if(gameObject != null && gameObject instanceof Ground) {
+            dy = 0;
+            GameRect groundRect = gameObject.getGameRect();
+
+            while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                gameRect.move(0, 1);
+            }
+            isGrounded=true;
+        }
+
+
         GameObject gameObject1=GameObject.objectAt(gameRect.getRight()+dx, gameRect.getBottom());
         if(gameObject1 !=null && gameObject1 instanceof Ground){
             dx=0;
@@ -67,14 +92,15 @@ public class Cow extends GameObject {
             System.out.println(" 2");
             isGrounded=true;
         }
-        GameObject gameObject3=GameObject.objectAt(gameRect.getX(),gameRect.getBottom());
+
+        GameObject gameObject3=GameObject.objectAt(gameRect.getX(),gameRect.getBottom() +dx);
         if(gameObject3 !=null && gameObject3 instanceof Ground){
             dx=0;
             System.out.println(" 3");
             isGrounded=true;
         }
 
-        GameObject gameObject4=GameObject.objectAt(gameRect.getX()-dx,gameRect.getY());
+        GameObject gameObject4=GameObject.objectAt(gameRect.getX() ,gameRect.getY());
         if(gameObject4 !=null && gameObject4 instanceof Ground){
             dx=0;
             System.out.println(" 4");
@@ -82,7 +108,7 @@ public class Cow extends GameObject {
         }
 
         if (InputManager.getInstance().isUp() && isGrounded) {
-            dy = -20;
+            dy = -30;
         }
 
         gameRect.move(dx, dy);
