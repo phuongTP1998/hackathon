@@ -49,29 +49,24 @@ public class Cow extends GameObject {
 
         if (InputManager.getInstance().isRight()) {
             dx += 5;
-        }
-
-        if (InputManager.getInstance().isLeft()) {
-            dx -= 5;
-        }
-        // còn bug lúc giữ không di chuyển  !!
-        if(dx<0) {
-            ArrayList<Image> images = new ArrayList<Image>();
-            {
-                images.add(Utils.loadImage("res/Minh/run-left-1.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-2.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-3.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-4.png"));
-            }
-            animation = new Animation(images);
-        }
-        if(dx>0){
             ArrayList<Image> images = new ArrayList<Image>();
             {
                 images.add(Utils.loadImage("res/Minh/run-right-1.png"));
                 images.add(Utils.loadImage("res/Minh/run-right-2.png"));
                 images.add(Utils.loadImage("res/Minh/run-right-3.png"));
                 images.add(Utils.loadImage("res/Minh/run-right-4.png"));
+            }
+            animation = new Animation(images);
+        }
+
+        if (InputManager.getInstance().isLeft()) {
+            dx -= 5;
+            ArrayList<Image> images = new ArrayList<Image>();
+            {
+                images.add(Utils.loadImage("res/Minh/run-left-1.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-2.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-3.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-4.png"));
             }
             animation = new Animation(images);
         }
