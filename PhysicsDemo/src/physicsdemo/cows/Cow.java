@@ -54,7 +54,19 @@ public class Cow extends GameObject {
             isGrounded=true;
         }
 
-        gameObject = GameObject.objectAt(gameRect.getX() + gameRect.getWidth(), gameRect.getBottom() + dy);
+        gameObject = GameObject.objectAt(gameRect.getX()+gameRect.getWidth()/2, gameRect.getBottom() + dy);
+        if(gameObject != null && gameObject instanceof Ground) {
+            dy = 0;
+            GameRect groundRect = gameObject.getGameRect();
+
+            while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                gameRect.move(0, 1);
+            }
+            isGrounded=true;
+        }
+
+
+        gameObject = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
 
         if(gameObject != null && gameObject instanceof Ground) {
             dy = 0;
@@ -66,7 +78,7 @@ public class Cow extends GameObject {
             isGrounded=true;
         }
 
-        gameObject = GameObject.objectAt(gameRect.getX() + gameRect.getWidth(), gameRect.getBottom() + dy);
+        gameObject = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
 
         if(gameObject != null && gameObject instanceof Ground) {
             dy = 0;
@@ -90,17 +102,14 @@ public class Cow extends GameObject {
         if(gameObject2 !=null && gameObject2 instanceof Ground){
             dx=0;
             System.out.println(" 2");
+            GameRect groundRect = gameObject.getGameRect();
+            while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                gameRect.move(0, 1);
+            }
             isGrounded=true;
         }
 
-        GameObject gameObject3=GameObject.objectAt(gameRect.getX(),gameRect.getBottom() +dx);
-        if(gameObject3 !=null && gameObject3 instanceof Ground){
-            dx=0;
-            System.out.println(" 3");
-            isGrounded=true;
-        }
-
-        GameObject gameObject4=GameObject.objectAt(gameRect.getX() ,gameRect.getY());
+        GameObject gameObject4=GameObject.objectAt(gameRect.getX() +dx,gameRect.getY());
         if(gameObject4 !=null && gameObject4 instanceof Ground){
             dx=0;
             System.out.println(" 4");
