@@ -42,78 +42,52 @@ public class Cow extends GameObject {
             dx -= 5;
         }
 
-        GameObject gameObject = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + dy);
-
-        if(gameObject != null && gameObject instanceof Ground) {
+        GameObject gameObjectLeftDown = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + dy);
+        if(gameObjectLeftDown != null && gameObjectLeftDown instanceof Ground) {
             dy = 0;
-            GameRect groundRect = gameObject.getGameRect();
-
+            GameRect groundRect = gameObjectLeftDown.getGameRect();
+            System.out.println(" Left down");
             while(gameRect.getBottom() + 1 < groundRect.getY()) {
                 gameRect.move(0, 1);
             }
             isGrounded=true;
         }
 
-        gameObject = GameObject.objectAt(gameRect.getX()+gameRect.getWidth()/2, gameRect.getBottom() + dy);
-        if(gameObject != null && gameObject instanceof Ground) {
+        GameObject gameObjectRightDown = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
+        if(gameObjectRightDown != null && gameObjectRightDown instanceof Ground) {
             dy = 0;
-            GameRect groundRect = gameObject.getGameRect();
-
+            GameRect groundRect = gameObjectRightDown.getGameRect();
+            System.out.println(" Right down");
             while(gameRect.getBottom() + 1 < groundRect.getY()) {
                 gameRect.move(0, 1);
             }
             isGrounded=true;
         }
 
-
-        gameObject = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
-
-        if(gameObject != null && gameObject instanceof Ground) {
-            dy = 0;
-            GameRect groundRect = gameObject.getGameRect();
-
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
+        GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(),gameRect.getBottom()+dy);
+        {
+            if(gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
+                dy = 0;
+                GameRect groundRect = gameObjectCenterDown.getGameRect();
+                System.out.println(" Center down");
+                while(gameRect.getBottom() + 1 < groundRect.getY()) {
+                    gameRect.move(0, 1);
+                }
+                isGrounded=true;
             }
-            isGrounded=true;
-        }
-
-        gameObject = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
-
-        if(gameObject != null && gameObject instanceof Ground) {
-            dy = 0;
-            GameRect groundRect = gameObject.getGameRect();
-
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
-            }
-            isGrounded=true;
         }
 
 
-        GameObject gameObject1=GameObject.objectAt(gameRect.getRight()+dx, gameRect.getBottom());
-        if(gameObject1 !=null && gameObject1 instanceof Ground){
+        GameObject gameObjectRightBottom=GameObject.objectAt(gameRect.getRight()+dx, gameRect.getBottom());
+        if(gameObjectRightBottom !=null && gameObjectRightBottom instanceof Ground){
             dx=0;
-            System.out.println(" 1");
-            isGrounded=true;
+            System.out.println(" Right Bottom");
         }
 
-        GameObject gameObject2=GameObject.objectAt(gameRect.getRight()+dx,gameRect.getY());
-        if(gameObject2 !=null && gameObject2 instanceof Ground){
+        GameObject gameObjectRightTop=GameObject.objectAt(gameRect.getRight()+dx,gameRect.getY());
+        if(gameObjectRightTop !=null && gameObjectRightTop instanceof Ground){
             dx=0;
-            System.out.println(" 2");
-            GameRect groundRect = gameObject.getGameRect();
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
-            }
-            isGrounded=true;
-        }
-
-        GameObject gameObject4=GameObject.objectAt(gameRect.getX() +dx,gameRect.getY());
-        if(gameObject4 !=null && gameObject4 instanceof Ground){
-            dx=0;
-            System.out.println(" 4");
-            isGrounded=true;
+            System.out.println(" Right Top");
         }
 
 
@@ -121,7 +95,8 @@ public class Cow extends GameObject {
             dy = -30;
         }
 
-        Camera.instanse.x += dx;
+    Camera.instanse.x += dx;
+
         gameRect.move(dx, dy);
     }
 }
