@@ -5,6 +5,7 @@ import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
 import physicsdemo.controller.BackGround;
 import physicsdemo.cows.Cow;
+import physicsdemo.enemies.EnemyController;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.utils.Utils;
 
@@ -21,6 +22,7 @@ private Image image;
 private Clip clip;
     public Level1Scene(){
         new Cow(new GameRect(500, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
+        new EnemyController(new GameRect(500,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
         new Ground(new GameRect(400,450,800,100),new SpriteRenderer("res/1.png"));
         new Ground(new GameRect( 50,470,50,50),new SpriteRenderer("res/Object/Crate.png"));
