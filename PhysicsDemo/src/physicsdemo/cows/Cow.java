@@ -25,14 +25,15 @@ public class Cow extends GameObject {
         super(gameRect, spriteRenderer);
         dx = 0;
         dy = 0;
+        // mặc định animation lúc đầu
         ArrayList<Image> images = new ArrayList<Image>();
-            {
-                images.add(Utils.loadImage("res/Minh/run-right-1.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-2.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-3.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-4.png"));
-            }
-            animation = new Animation(images);
+        {
+            images.add(Utils.loadImage("res/Minh/run-forward-1.png"));
+            images.add(Utils.loadImage("res/Minh/run-forward-2.png"));
+            images.add(Utils.loadImage("res/Minh/run-forward-3.png"));
+            images.add(Utils.loadImage("res/Minh/run-forward-4.png"));
+        }
+        animation = new Animation(images);
     }
 
     @Override
@@ -53,7 +54,29 @@ public class Cow extends GameObject {
         if (InputManager.getInstance().isLeft()) {
             dx -= 5;
         }
+        // còn bug lúc giữ không di chuyển  !!
+        if(dx<0) {
+            ArrayList<Image> images = new ArrayList<Image>();
+            {
+                images.add(Utils.loadImage("res/Minh/run-left-1.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-2.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-3.png"));
+                images.add(Utils.loadImage("res/Minh/run-left-4.png"));
+            }
+            animation = new Animation(images);
+        }
+        if(dx>0){
+            ArrayList<Image> images = new ArrayList<Image>();
+            {
+                images.add(Utils.loadImage("res/Minh/run-right-1.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-2.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-3.png"));
+                images.add(Utils.loadImage("res/Minh/run-right-4.png"));
+            }
+            animation = new Animation(images);
+        }
 
+// tạo que cho chú Bò
         GameObject gameObjectLeftDown = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + dy);
         if(gameObjectLeftDown != null && gameObjectLeftDown instanceof Ground) {
             dy = 0;
@@ -118,10 +141,10 @@ public class Cow extends GameObject {
         if(gameObjectUpCenter !=null && gameObjectUpCenter instanceof Ground){
             dy=0;
             System.out.println(" Center Up");
-            GameRect groundRect = gameObjectCenterDown.getGameRect();
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
-            }
+//            GameRect groundRect = gameObjectCenterDown.getGameRect();
+//            while(gameRect.getY() - 1 < groundRect.getBottom()) {
+//                gameRect.move(0, -1);
+//            }
         }
 
 
@@ -130,7 +153,6 @@ public class Cow extends GameObject {
         }
 
     Camera.instanse.x += dx;
-
         gameRect.move(dx, dy);
     }
 }
