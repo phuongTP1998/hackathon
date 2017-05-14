@@ -3,6 +3,7 @@ package physicsdemo.view;
 import physicsdemo.Camera;
 import physicsdemo.GameRect;
 import physicsdemo.utils.Utils;
+import physicsdemo.view.Camera;
 
 import java.awt.*;
 
