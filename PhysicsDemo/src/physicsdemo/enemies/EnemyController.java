@@ -19,6 +19,7 @@ public class EnemyController extends GameObject{
     private boolean isGrounded;
     private boolean isLeft;
     private int cooldown = 100;
+    private int initPosX;
 
 
     public EnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
@@ -26,6 +27,7 @@ public class EnemyController extends GameObject{
         dx=0;
         dy=0;
         moveBehavior = new MoveBehavior();
+        initPosX = gameRect.getX();
     }
 
     @Override
@@ -39,7 +41,6 @@ public class EnemyController extends GameObject{
 
     public void shooting(){
         EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(),this.gameRect.getY(),30,10),new SpriteRenderer("res/bullet-left.png"));
-
     }
 
     @Override
@@ -70,9 +71,10 @@ public class EnemyController extends GameObject{
             dx=0;
         }
         else{
-            if(gameRect.getX()<=450){
+            System.out.println(initPosX);
+            if(gameRect.getX()<=initPosX){
                 dx=2;
-            }else if(gameRect.getX()>=750){
+            }else if(gameRect.getX()>=initPosX+150){
                 dx=-2;
             }
         }

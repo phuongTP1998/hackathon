@@ -1,6 +1,7 @@
 package physicsdemo.enemies;
 
 import physicsdemo.GameRect;
+import physicsdemo.controller.FlyBehavior;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.SpriteRenderer;
 
@@ -11,6 +12,7 @@ public class SecondEnemyController extends EnemyController {
 
     public SecondEnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
+        this.setMoveBehavior(new FlyBehavior());
     }
 
     @Override
@@ -18,4 +20,8 @@ public class SecondEnemyController extends EnemyController {
         super.setMoveBehavior(moveBehavior);
     }
 
+    @Override
+    public void update() {
+        
+    }
 }
