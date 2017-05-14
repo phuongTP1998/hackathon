@@ -1,5 +1,7 @@
 package physicsdemo;
 
+import physicsdemo.view.SpriteRenderer;
+
 import java.awt.*;
 import java.util.List;
 import java.util.Vector;
@@ -23,8 +25,8 @@ public class GameObject {
 
 
     public static void updateAll() {
-        for (GameObject gameObject : gameObjects) {
-            gameObject.update();
+        for(int i=0;i<gameObjects.size();i++){
+            gameObjects.get(i).update();
         }
 
         for (GameObject gameObject : gameObjects) {
