@@ -1,5 +1,7 @@
-package physicsdemo;
+package physicsdemo.view;
 
+import physicsdemo.Camera;
+import physicsdemo.GameRect;
 import physicsdemo.utils.Utils;
 
 import java.awt.*;

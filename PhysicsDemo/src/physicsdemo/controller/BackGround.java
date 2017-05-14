@@ -1,7 +1,7 @@
 package physicsdemo.controller;
 
 import physicsdemo.GameRect;
-import physicsdemo.SpriteRenderer;
+import physicsdemo.view.SpriteRenderer;
 
 import java.awt.*;
 

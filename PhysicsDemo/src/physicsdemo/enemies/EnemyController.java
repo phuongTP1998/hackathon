@@ -2,12 +2,15 @@ package physicsdemo.enemies;
 
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
-import physicsdemo.SpriteRenderer;
+import physicsdemo.utils.Utils;
+import physicsdemo.view.Animation;
+import physicsdemo.view.SpriteRenderer;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by Quang Minh on 13/05/2017.
@@ -18,6 +21,8 @@ public class EnemyController extends GameObject{
     private MoveBehavior moveBehavior;
     private boolean isGrounded;
     private boolean isLeft;
+    private int cooldown = 100;
+
 
     public EnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -29,6 +34,15 @@ public class EnemyController extends GameObject{
     @Override
     public void draw(Graphics graphics) {
         super.draw(graphics);
+    }
+
+    public void setMoveBehavior(MoveBehavior moveBehavior){
+        this.moveBehavior = moveBehavior;
+    }
+
+    public void shooting(){
+        EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(),this.gameRect.getY(),30,10),new SpriteRenderer("res/bullet-left.png"));
+
     }
 
     @Override
@@ -44,26 +58,28 @@ public class EnemyController extends GameObject{
 
             while(gameRect.getBottom() + 1 < groundRect.getY()) {
                 gameRect.move(0, 1);
-
             }
             isGrounded=true;
         }
+        //shooting
+        cooldown--;
+        if(cooldown<=0){
+            shooting();
+            cooldown=100;
+        }
+
         //move behavior
         if(!isGrounded){
             dx=0;
         }
         else{
-            if(gameRect.getX()<=100){
-                dx=3;
-            }else if(gameRect.getX()>=300){
-                dx=-3;
+            if(gameRect.getX()<=450){
+                dx=2;
+            }else if(gameRect.getX()>=750){
+                dx=-2;
             }
         }
 
         gameRect.move(dx,dy);
-
-        System.out.println(""+gameRect.getX());
     }
-
-
 }

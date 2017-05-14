@@ -1,9 +1,9 @@
 package physicsdemo.cows;
 
 import physicsdemo.*;
-import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
+import physicsdemo.view.SpriteRenderer;
 
 import java.awt.*;
 
