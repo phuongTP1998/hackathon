@@ -1,10 +1,8 @@
 package physicsdemo.view;
 
-import physicsdemo.Camera;
 import physicsdemo.GameRect;
 
 import java.awt.*;
-import java.util.*;
 import java.util.List;
 
 /**

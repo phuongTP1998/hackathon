@@ -24,7 +24,7 @@ private Image image;
 private Clip clip;
 private Animation animation;
     public Level1Scene(){
-        new Cow(new GameRect(500, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
+        new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
         new EnemyController(new GameRect(500,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
         new Ground(new GameRect(400,350,800,100),new SpriteRenderer("res/1.png"));

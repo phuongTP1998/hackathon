@@ -1,6 +1,7 @@
 package physicsdemo;
 
 import physicsdemo.utils.Utils;
+import physicsdemo.view.Camera;
 
 import java.awt.*;
 

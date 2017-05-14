@@ -1,11 +1,11 @@
 package physicsdemo.cows;
 
 import physicsdemo.*;
-import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
+import physicsdemo.view.Camera;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -17,14 +17,14 @@ public class Cow extends GameObject {
 
     private int dx;
     private int dy;
-
     private boolean isGrounded;
     private Animation animation;
-
+    private boolean accept;
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
         dx = 0;
         dy = 0;
+
         // mặc định animation lúc đầu
         ArrayList<Image> images = new ArrayList<Image>();
         {
@@ -142,12 +142,13 @@ public class Cow extends GameObject {
 //            }
         }
 
-
+    if(gameRect.getX()>500 && gameRect.getX()<1000) {
+        Camera.instanse.x += dx;
+    }
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
 
-    Camera.instanse.x += dx;
         gameRect.move(dx, dy);
     }
 }
