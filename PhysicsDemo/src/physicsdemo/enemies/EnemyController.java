@@ -3,7 +3,10 @@ package physicsdemo.enemies;
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
+import physicsdemo.controller.Collider;
+import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.MoveBehavior;
+import physicsdemo.cows.Cow;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 
@@ -12,7 +15,7 @@ import java.awt.*;
 /**
  * Created by Quang Minh on 13/05/2017.
  */
-public class EnemyController extends GameObject{
+public class EnemyController extends GameObject implements Collider{
     private int dx;
     private int dy;
     private MoveBehavior moveBehavior;
@@ -20,6 +23,7 @@ public class EnemyController extends GameObject{
     private boolean isLeft;
     private int cooldown = 100;
     private int initPosX;
+    private int damage=1;
 
 
     public EnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
@@ -28,19 +32,26 @@ public class EnemyController extends GameObject{
         dy=0;
         moveBehavior = new MoveBehavior();
         initPosX = gameRect.getX();
+        CollisionManager.instance.add(this);
     }
 
+    public void getHit(int damage){
+        gameRect.setDead(true);
+        CollisionManager.instance.remove(this);
+    }
     @Override
     public void draw(Graphics graphics) {
         super.draw(graphics);
     }
+
 
     public void setMoveBehavior(MoveBehavior moveBehavior){
         this.moveBehavior = moveBehavior;
     }
 
     public void shooting(){
-        EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(),this.gameRect.getY(),30,10),new SpriteRenderer("res/bullet-left.png"));
+        EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(),this.gameRect.getY(),30,10),
+                new SpriteRenderer("res/bullet-left.png"));
     }
 
     @Override
@@ -80,5 +91,12 @@ public class EnemyController extends GameObject{
         }
 
         gameRect.move(dx,dy);
+    }
+
+    @Override
+    public void onCollide(Collider other) {
+        if(other instanceof Cow){
+            ((Cow) other).getHit(damage);
+        }
     }
 }
