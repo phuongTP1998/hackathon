@@ -1,6 +1,6 @@
-package physicsdemo.view;
+package physicsdemo;
 
-import physicsdemo.Camera;
+import physicsdemo.view.Camera;
 import physicsdemo.GameRect;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Camera;

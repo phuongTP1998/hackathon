@@ -2,7 +2,7 @@ package physicsdemo.enemies;
 
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
-import physicsdemo.view.SpriteRenderer;
+import physicsdemo.SpriteRenderer;
 
 import java.awt.*;
 

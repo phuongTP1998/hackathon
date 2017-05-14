@@ -2,7 +2,7 @@ package physicsdemo.obstacles;
 
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
-import physicsdemo.view.SpriteRenderer;
+import physicsdemo.SpriteRenderer;
 
 /**
  * Created by trongphuong1011 on 5/10/2017.

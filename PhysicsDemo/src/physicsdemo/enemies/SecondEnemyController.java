@@ -2,7 +2,7 @@ package physicsdemo.enemies;
 
 import physicsdemo.GameRect;
 import physicsdemo.controller.MoveBehavior;
-import physicsdemo.view.SpriteRenderer;
+import physicsdemo.SpriteRenderer;
 
 /**
  * Created by Quang Minh on 13/05/2017.
