@@ -26,10 +26,11 @@ private Animation animation;
     public Level1Scene(){
         new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
         new EnemyController(new GameRect(500,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
-        new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/1.png"));
-        new Ground(new GameRect(400,350,800,100),new SpriteRenderer("res/1.png"));
-        new Ground(new GameRect( 50,470,50,50),new SpriteRenderer("res/Object/Crate.png"));
-
+        new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(900,600,200,100),new SpriteRenderer("res/ground/ground4.png"));
+        new Ground(new GameRect(1200,600,200,100),new SpriteRenderer("res/ground/ground4.png"));
+        new Ground(new GameRect(1500,500,200,100),new SpriteRenderer("res/ground/ground4.png"));
+        new Ground(new GameRect(1700,400,200,100),new SpriteRenderer("res/ground/ground4.png"));
         image= Utils.loadImage("res/background/background1.png");
         clip=Utils.playSound("res/music/level1-1.wav",false);
     }

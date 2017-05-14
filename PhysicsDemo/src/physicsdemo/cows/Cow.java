@@ -1,6 +1,9 @@
 package physicsdemo.cows;
 
 import physicsdemo.*;
+import physicsdemo.gameScenes.Level1Scene;
+import physicsdemo.gameScenes.MenuScene;
+import physicsdemo.gameScenes.WinScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -72,34 +75,12 @@ public class Cow extends GameObject {
         }
 
 // tạo que cho chú Bò
-        GameObject gameObjectLeftDown = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + dy);
-        if(gameObjectLeftDown != null && gameObjectLeftDown instanceof Ground) {
-            dy = 0;
-            GameRect groundRect = gameObjectLeftDown.getGameRect();
-            System.out.println(" Left down");
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
-            }
-            isGrounded=true;
-        }
-
-        GameObject gameObjectRightDown = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + dy);
-        if(gameObjectRightDown != null && gameObjectRightDown instanceof Ground) {
-            dy = 0;
-            GameRect groundRect = gameObjectRightDown.getGameRect();
-            System.out.println(" Right down");
-            while(gameRect.getBottom() + 1 < groundRect.getY()) {
-                gameRect.move(0, 1);
-            }
-            isGrounded=true;
-        }
-
         GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(),gameRect.getBottom()+dy);
         {
             if(gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
                 dy = 0;
                 GameRect groundRect = gameObjectCenterDown.getGameRect();
-                System.out.println(" Center down");
+                System.out.println(" Center Down");
                 while(gameRect.getBottom() + 1 < groundRect.getY()) {
                     gameRect.move(0, 1);
                 }
@@ -136,14 +117,14 @@ public class Cow extends GameObject {
         if(gameObjectUpCenter !=null && gameObjectUpCenter instanceof Ground){
             dy=0;
             System.out.println(" Center Up");
-//            GameRect groundRect = gameObjectCenterDown.getGameRect();
-//            while(gameRect.getY() - 1 < groundRect.getBottom()) {
-//                gameRect.move(0, -1);
-//            }
         }
 
-    if(gameRect.getX()>500 && gameRect.getX()<1000) {
+        // chỉnh camera stop 2 đầu Map
+    if(gameRect.getX()>500 && gameRect.getX()<1400) {
         Camera.instanse.x += dx;
+    }
+    if(gameRect.getX()==1500){
+        GameWindow.instance.setCurrentScene(new WinScene());
     }
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
