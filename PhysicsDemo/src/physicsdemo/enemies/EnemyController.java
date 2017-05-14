@@ -2,15 +2,12 @@ package physicsdemo.enemies;
 
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
-import physicsdemo.utils.Utils;
-import physicsdemo.view.Animation;
-import physicsdemo.view.SpriteRenderer;
+import physicsdemo.SpriteRenderer;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 /**
  * Created by Quang Minh on 13/05/2017.
