@@ -64,7 +64,6 @@ public class GameObject extends Controller implements Collider {
     }
 
 
-
     public void draw(Graphics graphics) {
         this.spriteRenderer.render(graphics, gameRect);
     }

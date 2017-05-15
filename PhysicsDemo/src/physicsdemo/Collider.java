@@ -5,5 +5,6 @@ package physicsdemo;
  */
 public interface Collider {
     GameRect getGameRect();
+
     void onCollide(Collider other);
 }

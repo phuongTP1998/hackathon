@@ -22,6 +22,6 @@ public class SecondEnemyController extends EnemyController {
 
     @Override
     public void update() {
-        
+
     }
 }

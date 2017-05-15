@@ -25,11 +25,16 @@ public class Cow extends GameObject implements Collider {
     private int playerHP = 10;
     private Animation animation;
     private int damage = 1;
+    private ArrayList<Milk> milks;
+    boolean moveLeft;
+    boolean isShootable = true;
+    int countDownForShoot = 10;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
         dx = 0;
         dy = 0;
+        milks = new ArrayList<>();
         // mặc định animation lúc đầu
         ArrayList<Image> images = new ArrayList<Image>();
         {
@@ -42,9 +47,14 @@ public class Cow extends GameObject implements Collider {
         CollisionManager.instance.add(this);
     }
 
+    public void setMilks(ArrayList<Milk> milks) {
+        this.milks = milks;
+    }
+
     public int getPlayerHP() {
         return playerHP;
     }
+
     public int getDamage() {
         return damage;
     }
@@ -74,6 +84,7 @@ public class Cow extends GameObject implements Collider {
         isGrounded = false;
 
         if (InputManager.getInstance().isRight()) {
+            moveLeft = false;
             dx += 5;
             ArrayList<Image> images = new ArrayList<Image>();
             {
@@ -86,6 +97,7 @@ public class Cow extends GameObject implements Collider {
         }
 
         if (InputManager.getInstance().isLeft()) {
+            moveLeft = true;
             dx -= 5;
             ArrayList<Image> images = new ArrayList<Image>();
             {
@@ -135,7 +147,6 @@ public class Cow extends GameObject implements Collider {
         }
 
 
-
         // chỉnh camera stop 2 đầu Map
         if (gameRect.getX() > 500 && gameRect.getX() < 1400) {
             Camera.instanse.x += dx;
@@ -147,6 +158,26 @@ public class Cow extends GameObject implements Collider {
             dy = -30;
         }
 
+        if (InputManager.getInstance().isSpace()) {
+            if (isShootable) {
+                isShootable = false;
+                Milk milk;
+                if (moveLeft) {
+                    milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-left.png"));
+                    milk.setMoveLeft(true);
+                } else {
+                    milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-right.png"));
+                    milk.setMoveLeft(false);
+                }
+            } else {
+                countDownForShoot--;
+                if (countDownForShoot == 0) {
+                    countDownForShoot = 10;
+                    isShootable = true;
+                }
+            }
+        }
+
         gameRect.move(dx, dy);
         System.out.println(playerHP);
     }
@@ -155,11 +186,11 @@ public class Cow extends GameObject implements Collider {
     public void onCollide(Collider other) {
         if (other instanceof EnemyBullet) {
             ((EnemyBullet) other).getHit(damage);
-            playerHP=playerHP-1;
+            playerHP = playerHP - 1;
         }
         if (other instanceof EnemyController) {
             ((EnemyController) other).getHit(damage);
-            playerHP=playerHP-1;
+            playerHP = playerHP - 1;
         }
     }
 }

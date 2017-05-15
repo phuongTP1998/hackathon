@@ -11,19 +11,20 @@ import java.util.Iterator;
  */
 public class ControllerManager {
     private ArrayList<Controller> controllers;
-    private boolean clear=false;
+    private boolean clear = false;
 
-    public static final ControllerManager instance= new ControllerManager();
+    public static final ControllerManager instance = new ControllerManager();
 
-    private ControllerManager(){
-        controllers=new ArrayList<>();
+    private ControllerManager() {
+        controllers = new ArrayList<>();
     }
-    public void add(Controller controller){
+
+    public void add(Controller controller) {
         controllers.add(controller);
     }
 
-    public void draw(Graphics graphics){
-        for(Controller controller: controllers){
+    public void draw(Graphics graphics) {
+        for (Controller controller : controllers) {
             controller.draw(graphics);
         }
     }
@@ -32,24 +33,28 @@ public class ControllerManager {
         this.clear = clear;
     }
 
-    public void update(){
-        if(clear==true){
-            Iterator<Controller> iterator=controllers.iterator();
-            while(iterator.hasNext()){
-                Controller controller=iterator.next();
+    public void update() {
+        if (clear == true) {
+            Iterator<Controller> iterator = controllers.iterator();
+            while (iterator.hasNext()) {
+                Controller controller = iterator.next();
                 iterator.remove();
             }
 
         }
-        Iterator<Controller> iterator=controllers.iterator();
-        while(iterator.hasNext()){
-            Controller controller=iterator.next();
-            if(controller.getGameRect().isDead()){
+        Iterator<Controller> iterator = controllers.iterator();
+        while (iterator.hasNext()) {
+            Controller controller = iterator.next();
+            if (controller.getGameRect().isDead()) {
                 iterator.remove();
             }
         }
-        for(Controller controller:controllers){
-            controller.update();
+
+//        for (Controller controller : controllers) {
+//            controller.update();
+//        }
+        for (int i = 0; i < controllers.size(); i++) {
+            controllers.get(i).update();
         }
     }
 }

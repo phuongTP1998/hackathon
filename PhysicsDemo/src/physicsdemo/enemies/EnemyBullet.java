@@ -24,6 +24,7 @@ public class EnemyBullet extends GameObject implements Collider {
         gameRect.setDead(true);
         CollisionManager.instance.remove(this);
     }
+
     public int getDamage() {
         return damage;
     }

@@ -18,6 +18,7 @@ public class Utils {
         }
         return null;
     }
+
     public static Clip playSound(String audioUrl, boolean repeat) {
 
         File soundFile = new File(audioUrl);
@@ -26,10 +27,9 @@ public class Utils {
             Clip clip = AudioSystem.getClip();
             clip.open(audioIn);
             clip.start();
-            if(repeat) {
+            if (repeat) {
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
-            }
-            else {
+            } else {
                 clip.loop(0);
             }
             return clip;
