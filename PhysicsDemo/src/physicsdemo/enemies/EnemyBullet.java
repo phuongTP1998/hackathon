@@ -20,8 +20,9 @@ public class EnemyBullet extends GameObject implements Collider {
         CollisionManager.instance.add(this);
     }
 
-    public void getHit(int damagee) {
+    public void getHit(int damage) {
         gameRect.setDead(true);
+        CollisionManager.instance.remove(this);
     }
     public int getDamage() {
         return damage;
@@ -41,8 +42,7 @@ public class EnemyBullet extends GameObject implements Collider {
     @Override
     public void onCollide(Collider other) {
         if (other instanceof Cow) {
-            ((Cow) other).getHit(damage );
-            System.out.println(" Collide");
+            ((Cow) other).getHit(damage);
         }
     }
 }

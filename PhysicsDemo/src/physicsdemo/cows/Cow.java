@@ -5,7 +5,6 @@ import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
-import physicsdemo.gameScenes.WinScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -31,7 +30,6 @@ public class Cow extends GameObject implements Collider {
         super(gameRect, spriteRenderer);
         dx = 0;
         dy = 0;
-        CollisionManager.instance.add(this);
         // mặc định animation lúc đầu
         ArrayList<Image> images = new ArrayList<Image>();
         {
@@ -41,8 +39,7 @@ public class Cow extends GameObject implements Collider {
             images.add(Utils.loadImage("res/Minh/run-forward-4.png"));
         }
         animation = new Animation(images);
-
-
+        CollisionManager.instance.add(this);
     }
 
     public int getPlayerHP() {
@@ -60,10 +57,8 @@ public class Cow extends GameObject implements Collider {
         return gameRect;
     }
 
-    public void getHit(int damagee) {
+    public void getHit(int damage) {
         gameRect.setDead(true);
-        CollisionManager.instance.remove(this);
-        System.out.println(" get hit");
     }
 
 
@@ -109,10 +104,6 @@ public class Cow extends GameObject implements Collider {
             if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
                 dy = 0;
                 GameRect groundRect = gameObjectCenterDown.getGameRect();
-                System.out.println(" Center Down");
-                while (gameRect.getBottom() + 1 < groundRect.getY()) {
-                    gameRect.move(0, 1);
-                }
                 isGrounded = true;
             }
         }
@@ -149,9 +140,9 @@ public class Cow extends GameObject implements Collider {
         if (gameRect.getX() > 500 && gameRect.getX() < 1400) {
             Camera.instanse.x += dx;
         }
-        if (gameRect.getX() == 1500) {
-            GameWindow.instance.setCurrentScene(new WinScene());
-        }
+//        if (gameRect.getX() == 1500) {
+//            GameWindow.instance.setCurrentScene(new WinScene());
+//        }
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
@@ -165,12 +156,10 @@ public class Cow extends GameObject implements Collider {
         if (other instanceof EnemyBullet) {
             ((EnemyBullet) other).getHit(damage);
             playerHP=playerHP-1;
-            System.out.println(" collide");
         }
         if (other instanceof EnemyController) {
             ((EnemyController) other).getHit(damage);
             playerHP=playerHP-1;
-            System.out.println(" collide");
         }
     }
 }

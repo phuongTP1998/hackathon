@@ -1,5 +1,7 @@
 package physicsdemo;
 
+import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
 import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.gameScenes.MenuScene;
@@ -109,6 +111,8 @@ import java.awt.image.BufferedImage;
                     }
                     GameObject.updateAll();
                     currentScene.update();
+                    CollisionManager.instance.update();
+                    ControllerManager.instance.update();
                     repaint();
                 }
             }
@@ -122,6 +126,7 @@ import java.awt.image.BufferedImage;
     public void update(Graphics graphics) {
         currentScene.draw(backbufferGraphics);
         GameObject.drawAll(backbufferGraphics);
+        ControllerManager.instance.draw(backbufferGraphics);
         graphics.drawImage(backBufferImage, 0, 0, null);
     }
 }

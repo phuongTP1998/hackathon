@@ -5,6 +5,7 @@ import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
 import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.cows.Cow;
 import physicsdemo.obstacles.Ground;
@@ -55,6 +56,7 @@ public class EnemyController extends GameObject implements Collider{
     public void shooting(){
         EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(),this.gameRect.getY(),30,10),
                 new SpriteRenderer("res/bullet-left.png"));
+        ControllerManager.instance.add(enemyBullet);
     }
 
     @Override
@@ -85,7 +87,6 @@ public class EnemyController extends GameObject implements Collider{
             dx=0;
         }
         else{
-            System.out.println(initPosX);
             if(gameRect.getX()<=initPosX){
                 dx=2;
             }else if(gameRect.getX()>=initPosX+150){
