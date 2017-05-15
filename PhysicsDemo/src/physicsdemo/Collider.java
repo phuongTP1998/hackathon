@@ -1,6 +1,4 @@
-package physicsdemo.controller;
-
-import physicsdemo.GameRect;
+package physicsdemo;
 
 /**
  * Created by trongphuong1011 on 5/14/2017.

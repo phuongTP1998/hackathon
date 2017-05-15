@@ -1,12 +1,10 @@
 package physicsdemo.cows;
 
 import physicsdemo.*;
-import physicsdemo.controller.Collider;
+import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
-import physicsdemo.gameScenes.Level1Scene;
-import physicsdemo.gameScenes.MenuScene;
 import physicsdemo.gameScenes.WinScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
@@ -62,9 +60,10 @@ public class Cow extends GameObject implements Collider {
         return gameRect;
     }
 
-    public void getHit(int damage) {
+    public void getHit(int damagee) {
         gameRect.setDead(true);
         CollisionManager.instance.remove(this);
+        System.out.println(" get hit");
     }
 
 
@@ -166,10 +165,12 @@ public class Cow extends GameObject implements Collider {
         if (other instanceof EnemyBullet) {
             ((EnemyBullet) other).getHit(damage);
             playerHP=playerHP-1;
+            System.out.println(" collide");
         }
         if (other instanceof EnemyController) {
             ((EnemyController) other).getHit(damage);
             playerHP=playerHP-1;
+            System.out.println(" collide");
         }
     }
 }

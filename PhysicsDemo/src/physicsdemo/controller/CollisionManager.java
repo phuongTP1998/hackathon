@@ -1,5 +1,6 @@
 package physicsdemo.controller;
 
+import physicsdemo.Collider;
 import physicsdemo.GameRect;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class CollisionManager {
     public void update(){
         for(int i=0;i<colliders.size()-1;i++){
             for (int j=i+1;j<colliders.size();j++){
+
                 Collider ci=colliders.get(i);
                 Collider cj=colliders.get(j);
 

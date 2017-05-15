@@ -3,7 +3,7 @@ package physicsdemo.enemies;
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
-import physicsdemo.controller.Collider;
+import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.cows.Cow;
@@ -23,7 +23,7 @@ public class EnemyController extends GameObject implements Collider{
     private boolean isLeft;
     private int cooldown = 100;
     private int initPosX;
-    private int damage=1;
+    private int damage =1;
 
 
     public EnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
@@ -44,6 +44,9 @@ public class EnemyController extends GameObject implements Collider{
         super.draw(graphics);
     }
 
+    public int getDamage() {
+        return damage;
+    }
 
     public void setMoveBehavior(MoveBehavior moveBehavior){
         this.moveBehavior = moveBehavior;
@@ -97,6 +100,7 @@ public class EnemyController extends GameObject implements Collider{
     public void onCollide(Collider other) {
         if(other instanceof Cow){
             ((Cow) other).getHit(damage);
+            System.out.println(" Collide");
         }
     }
 }

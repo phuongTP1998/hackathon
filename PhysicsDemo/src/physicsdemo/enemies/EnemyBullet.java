@@ -3,7 +3,7 @@ package physicsdemo.enemies;
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
-import physicsdemo.controller.Collider;
+import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.cows.Cow;
 
@@ -20,9 +20,8 @@ public class EnemyBullet extends GameObject implements Collider {
         CollisionManager.instance.add(this);
     }
 
-    public void getHit(int damage) {
+    public void getHit(int damagee) {
         gameRect.setDead(true);
-        CollisionManager.instance.remove(this);
     }
     public int getDamage() {
         return damage;
@@ -42,7 +41,8 @@ public class EnemyBullet extends GameObject implements Collider {
     @Override
     public void onCollide(Collider other) {
         if (other instanceof Cow) {
-            ((Cow) other).getHit(damage);
+            ((Cow) other).getHit(damage );
+            System.out.println(" Collide");
         }
     }
 }

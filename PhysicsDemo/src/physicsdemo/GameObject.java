@@ -1,6 +1,5 @@
 package physicsdemo;
 
-import physicsdemo.controller.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.enemies.EnemyBullet;
 
