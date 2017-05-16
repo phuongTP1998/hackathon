@@ -7,6 +7,7 @@ import physicsdemo.controller.ControllerManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.gameScenes.Level1Scene;
+import physicsdemo.gameScenes.WinScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -156,14 +157,11 @@ public class Cow extends GameObject implements Collider {
             dy = 0;
         }
 
-
         // chỉnh camera stop 2 đầu Map
         if (gameRect.getX() > 500 && gameRect.getX() < 1400) {
             Camera.instanse.x += dx;
         }
-//        if (gameRect.getX() == 1500) {
-//            GameWindow.instance.setCurrentScene(new WinScene());
-//        }
+
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
@@ -189,7 +187,11 @@ public class Cow extends GameObject implements Collider {
         }
     }
         gameRect.move(dx, dy);
-        System.out.println(playerHP);
+//        if(playerHP<=0){
+//            GameWindow.instance.setCurrentScene(new WinScene());
+//            GameObject.removeAll();
+//            ControllerManager.instance.setClear(true);
+//        }
     }
 
     @Override

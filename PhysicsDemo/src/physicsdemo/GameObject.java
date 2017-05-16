@@ -5,6 +5,7 @@ import physicsdemo.controller.Controller;
 import physicsdemo.enemies.EnemyBullet;
 
 import java.awt.*;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
@@ -14,6 +15,7 @@ import java.util.Vector;
 public class GameObject extends Controller implements Collider {
     protected GameRect gameRect;
     protected SpriteRenderer spriteRenderer;
+    boolean clear = false;
 
 
     private static List<GameObject> gameObjects;
@@ -28,24 +30,35 @@ public class GameObject extends Controller implements Collider {
 
 
     public static void updateAll() {
-        for (int i = 0; i < gameObjects.size(); i++) {
-            gameObjects.get(i).update();
-        }
+            for (int i = 0; i < gameObjects.size(); i++) {
+                gameObjects.get(i).update();
+            }
 
-        for (GameObject gameObject : gameObjects) {
-            gameObject.lateUpdate();
-        }
+            for (GameObject gameObject : gameObjects) {
+                gameObject.lateUpdate();
+            }
     }
+
+
     public static void remove(GameObject gameObject) {
             if (gameObject.getGameRect().isDead()){
                gameObjects.remove(gameObject);
             }
-        }
+    }
+
     public static void drawAll(Graphics graphics) {
         for (GameObject gameObject : gameObjects) {
             gameObject.draw(graphics);
         }
     }
+
+//    public static void removeAll(){
+//        Iterator<GameObject> iterator = gameObjects.iterator();
+//        while (iterator.hasNext()) {
+//            GameObject gameObject1 = iterator.next();
+//            iterator.remove();
+//        }
+//    }
 
     public static GameObject objectAt(int x, int y) {
         for (GameObject gameObject : gameObjects) {
@@ -67,12 +80,12 @@ public class GameObject extends Controller implements Collider {
         gameObjects.add(this);
     }
 
+
     public void draw(Graphics graphics) {
         this.spriteRenderer.render(graphics, gameRect);
     }
 
     public void update() {
-
     }
 
     public void lateUpdate() {
