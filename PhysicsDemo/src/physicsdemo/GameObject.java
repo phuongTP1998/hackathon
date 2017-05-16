@@ -36,7 +36,11 @@ public class GameObject extends Controller implements Collider {
             gameObject.lateUpdate();
         }
     }
-
+    public static void remove(GameObject gameObject) {
+            if (gameObject.getGameRect().isDead()){
+               gameObjects.remove(gameObject);
+            }
+        }
     public static void drawAll(Graphics graphics) {
         for (GameObject gameObject : gameObjects) {
             gameObject.draw(graphics);
@@ -63,7 +67,6 @@ public class GameObject extends Controller implements Collider {
         gameObjects.add(this);
     }
 
-
     public void draw(Graphics graphics) {
         this.spriteRenderer.render(graphics, gameRect);
     }
@@ -73,12 +76,12 @@ public class GameObject extends Controller implements Collider {
     }
 
     public void lateUpdate() {
-
     }
 
     public GameRect getGameRect() {
         return gameRect;
     }
+
 
     @Override
     public void onCollide(Collider other) {

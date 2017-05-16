@@ -3,6 +3,7 @@ package physicsdemo.cows;
 import physicsdemo.*;
 import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.gameScenes.Level1Scene;
@@ -11,7 +12,6 @@ import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
 import physicsdemo.view.Camera;
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -47,6 +47,7 @@ public class Cow extends GameObject implements Collider {
         }
         animation = new Animation(images);
         CollisionManager.instance.add(this);
+        ControllerManager.instance.add(this);
     }
 
     public void setMilks(ArrayList<Milk> milks) {
@@ -130,7 +131,6 @@ public class Cow extends GameObject implements Collider {
             }
         }
 
-
         GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
         if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
             dx = 0;
@@ -208,5 +208,6 @@ public class Cow extends GameObject implements Collider {
             setLevelUp(true);
             setPlayerHP(30);
         }
+
     }
 }

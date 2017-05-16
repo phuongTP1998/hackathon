@@ -120,13 +120,11 @@ public class GameWindow extends Frame {
         thread.start();
     }
 
-//    Image backgroundImage = Utils.loadImage("res/background/background1.png");
-
     @Override
     public void update(Graphics graphics) {
         currentScene.draw(backbufferGraphics);
-        GameObject.drawAll(backbufferGraphics);
         ControllerManager.instance.draw(backbufferGraphics);
+        GameObject.drawAll(backbufferGraphics);
         graphics.drawImage(backBufferImage, 0, 0, null);
     }
 }

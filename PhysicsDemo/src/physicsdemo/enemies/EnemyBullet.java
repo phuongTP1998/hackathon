@@ -5,6 +5,7 @@ import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
 import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
 
 import java.awt.*;
@@ -18,11 +19,13 @@ public class EnemyBullet extends GameObject implements Collider {
     public EnemyBullet(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
         CollisionManager.instance.add(this);
+        ControllerManager.instance.add(this);
     }
 
     public void getHit(int damage) {
         gameRect.setDead(true);
         CollisionManager.instance.remove(this);
+        GameObject.remove(this);
     }
 
     public int getDamage() {

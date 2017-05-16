@@ -34,11 +34,13 @@ public class EnemyController extends GameObject implements Collider {
         moveBehavior = new MoveBehavior();
         initPosX = gameRect.getX();
         CollisionManager.instance.add(this);
+        ControllerManager.instance.add(this);
     }
 
     public void getHit(int damage) {
         gameRect.setDead(true);
         CollisionManager.instance.remove(this);
+        GameObject.remove(this);
     }
 
     @Override
@@ -57,7 +59,6 @@ public class EnemyController extends GameObject implements Collider {
     public void shooting() {
         EnemyBullet enemyBullet = new EnemyBullet(new GameRect(this.gameRect.getX(), this.gameRect.getY(), 30, 10),
                 new SpriteRenderer("res/bullet-left.png"));
-        ControllerManager.instance.add(enemyBullet);
     }
 
     @Override
@@ -70,13 +71,11 @@ public class EnemyController extends GameObject implements Collider {
         if (gameObject != null && gameObject instanceof Ground) {
             dy = 0;
             GameRect groundRect = gameObject.getGameRect();
-
             while (gameRect.getBottom() + 1 < groundRect.getY()) {
                 gameRect.move(0, 1);
             }
             isGrounded = true;
         }
-        //shooting
         cooldown--;
         if (cooldown <= 0) {
             shooting();
@@ -101,7 +100,6 @@ public class EnemyController extends GameObject implements Collider {
     public void onCollide(Collider other) {
         if (other instanceof Cow) {
             ((Cow) other).getHit(damage);
-            System.out.println(" Collide");
         }
     }
 }

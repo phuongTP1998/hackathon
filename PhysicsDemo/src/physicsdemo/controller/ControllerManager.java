@@ -1,5 +1,6 @@
 package physicsdemo.controller;
 
+import physicsdemo.GameObject;
 import physicsdemo.enemies.EnemyController;
 
 import java.awt.*;
@@ -40,7 +41,6 @@ public class ControllerManager {
                 Controller controller = iterator.next();
                 iterator.remove();
             }
-
         }
         Iterator<Controller> iterator = controllers.iterator();
         while (iterator.hasNext()) {
@@ -49,10 +49,6 @@ public class ControllerManager {
                 iterator.remove();
             }
         }
-
-//        for (Controller controller : controllers) {
-//            controller.update();
-//        }
         for (int i = 0; i < controllers.size(); i++) {
             controllers.get(i).update();
         }
