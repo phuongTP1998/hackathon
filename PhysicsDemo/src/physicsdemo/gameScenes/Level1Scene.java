@@ -5,6 +5,7 @@ import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
+import physicsdemo.cows.LevelUp;
 import physicsdemo.cows.Milk;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.obstacles.Ground;
@@ -32,7 +33,7 @@ public class Level1Scene implements GameScenes {
             EnemyController enemyController = new EnemyController(new GameRect(500, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
             ControllerManager.instance.add(enemyController);
         }
-//        new SecondEnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        new LevelUp(new GameRect(850,400,100,100),new SpriteRenderer("res/Object/Crate.png"));
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"));
         new Ground(new GameRect(900, 600, 200, 100), new SpriteRenderer("res/ground/ground4.png"));
         new Ground(new GameRect(1200, 600, 200, 100), new SpriteRenderer("res/ground/ground4.png"));

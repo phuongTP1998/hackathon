@@ -5,6 +5,7 @@ import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
+import physicsdemo.gameScenes.Level1Scene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -29,6 +30,7 @@ public class Cow extends GameObject implements Collider {
     boolean moveLeft;
     boolean isShootable = true;
     int countDownForShoot = 10;
+    protected boolean levelUp =false;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -49,6 +51,14 @@ public class Cow extends GameObject implements Collider {
 
     public void setMilks(ArrayList<Milk> milks) {
         this.milks = milks;
+    }
+
+    public boolean isLevelUp() {
+        return levelUp;
+    }
+
+    public void setLevelUp(boolean levelUp) {
+        this.levelUp = levelUp;
     }
 
     public int getPlayerHP() {
@@ -157,7 +167,7 @@ public class Cow extends GameObject implements Collider {
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
-
+    if(levelUp==true) {
         if (InputManager.getInstance().isSpace()) {
             if (isShootable) {
                 isShootable = false;
@@ -177,7 +187,7 @@ public class Cow extends GameObject implements Collider {
                 }
             }
         }
-
+    }
         gameRect.move(dx, dy);
         System.out.println(playerHP);
     }
@@ -191,6 +201,12 @@ public class Cow extends GameObject implements Collider {
         if (other instanceof EnemyController) {
             ((EnemyController) other).getHit(damage);
             playerHP = playerHP - 1;
+        }
+        if(other instanceof LevelUp){
+            ((LevelUp) other ).getHit(damage);
+            System.out.println(" Level Up");
+            setLevelUp(true);
+            setPlayerHP(30);
         }
     }
 }
