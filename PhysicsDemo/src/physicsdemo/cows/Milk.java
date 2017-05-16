@@ -13,8 +13,6 @@ import java.awt.*;
  */
 public class Milk extends GameObject {
     private int dx, dy;
-    //    boolean maxHeight;
-//    GameRect cowNow;
     private boolean moveLeft;
 
     public void setMoveLeft(boolean moveLeft) {
@@ -28,9 +26,7 @@ public class Milk extends GameObject {
                 spriteRenderer.getImage().getWidth(null),
                 spriteRenderer.getImage().getHeight(null));
         Level1Scene.milks.add(this);
-//        cowNow = gameRect;
     }
-
     int countDown = 3;
 
     @Override
