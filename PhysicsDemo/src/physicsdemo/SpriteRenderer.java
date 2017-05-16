@@ -13,16 +13,22 @@ import java.awt.*;
 public class SpriteRenderer {
     private Image image;
 
+    public Image getImage() {
+        return image;
+    }
+
     public SpriteRenderer(Image image) {
         this.image = image;
     }
-    public SpriteRenderer(String path){
+
+    public SpriteRenderer(String path) {
         this(Utils.loadImage(path));
     }
-    public void render(Graphics graphics, GameRect gameRect){
+
+    public void render(Graphics graphics, GameRect gameRect) {
         graphics.drawImage(image,
                 gameRect.getX() - Camera.instanse.x, gameRect.getY(),
-                gameRect.getWidth(),gameRect.getHeight(),
+                gameRect.getWidth(), gameRect.getHeight(),
                 null);
     }
 }

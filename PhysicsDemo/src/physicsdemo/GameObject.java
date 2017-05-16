@@ -1,15 +1,22 @@
 package physicsdemo;
 
+import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.Controller;
+import physicsdemo.enemies.EnemyBullet;
+
 import java.awt.*;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Vector;
 
 /**
  * Created by trongphuong1011 on 5/10/2017.
  */
-public class GameObject {
+public class GameObject extends Controller implements Collider {
     protected GameRect gameRect;
     protected SpriteRenderer spriteRenderer;
+    boolean clear = false;
+
 
     private static List<GameObject> gameObjects;
 
@@ -23,7 +30,7 @@ public class GameObject {
 
 
     public static void updateAll() {
-        for(int i=0;i<gameObjects.size();i++){
+        for (int i = 0; i < gameObjects.size(); i++) {
             gameObjects.get(i).update();
         }
 
@@ -32,11 +39,36 @@ public class GameObject {
         }
     }
 
-    public static void drawAll(Graphics graphics) {
-        for (GameObject gameObject : gameObjects) {
-            gameObject.draw(graphics);
+
+    public static void remove(GameObject gameObject) {
+        if (gameObject.getGameRect().isDead()) {
+            gameObjects.remove(gameObject);
         }
     }
+
+    public static void drawAll(Graphics graphics) {
+//        for (GameObject gameObject : gameObjects) {
+//            gameObject.draw(graphics);
+//        }
+//        Iterator<GameObject> iterator = gameObjects.iterator();
+//        while (iterator.hasNext()) {
+//            GameObject gameObject = iterator.next();
+//            gameObject.draw(graphics);
+//        }
+
+        for(int i=0;i<gameObjects.size();i++){
+            gameObjects.get(i).draw(graphics);
+        }
+
+    }
+
+//    public static void removeAll(){
+//        Iterator<GameObject> iterator = gameObjects.iterator();
+//        while (iterator.hasNext()) {
+//            GameObject gameObject1 = iterator.next();
+//            iterator.remove();
+//        }
+//    }
 
     public static GameObject objectAt(int x, int y) {
         for (GameObject gameObject : gameObjects) {
@@ -46,6 +78,7 @@ public class GameObject {
         }
         return null;
     }
+
 
     public boolean contains(int x, int y) {
         return this.gameRect.contains(x, y);
@@ -57,19 +90,25 @@ public class GameObject {
         gameObjects.add(this);
     }
 
+
     public void draw(Graphics graphics) {
         this.spriteRenderer.render(graphics, gameRect);
     }
 
     public void update() {
-
     }
 
     public void lateUpdate() {
-
     }
 
     public GameRect getGameRect() {
         return gameRect;
     }
+
+
+    @Override
+    public void onCollide(Collider other) {
+
+    }
+
 }

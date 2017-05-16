@@ -1,5 +1,7 @@
 package physicsdemo;
 
+import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
 import physicsdemo.gameScenes.GameScenes;
 import physicsdemo.gameScenes.MenuScene;
@@ -16,26 +18,26 @@ import java.awt.image.BufferedImage;
 /**
  * Created by trongphuong1011 on 4/8/2017.
  */
-        public class GameWindow extends Frame {
+public class GameWindow extends Frame {
 
-            BufferedImage backBufferImage;
-            Graphics backbufferGraphics;
+    BufferedImage backBufferImage;
+    Graphics backbufferGraphics;
 
-            InputManager inputManager;
-            GameScenes currentScene;
-            public static GameWindow instance;
+    InputManager inputManager;
+    GameScenes currentScene;
+    public static GameWindow instance;
 
-            public void setCurrentScene(GameScenes currentScene) {
-                this.currentScene = currentScene;
-            }
+    public void setCurrentScene(GameScenes currentScene) {
+        this.currentScene = currentScene;
+    }
 
-            public GameWindow() {
+    public GameWindow() {
 
-                setVisible(true);
-                setSize(1000, 700);
-                inputManager = new InputManager();
-                instance=this;
-        currentScene= new MenuScene();
+        setVisible(true);
+        setSize(1000, 700);
+        inputManager = new InputManager();
+        instance = this;
+        currentScene = new MenuScene();
 
         backBufferImage = new BufferedImage(1000, 700, BufferedImage.TYPE_INT_ARGB);
         backbufferGraphics = backBufferImage.getGraphics();
@@ -109,6 +111,8 @@ import java.awt.image.BufferedImage;
                     }
                     GameObject.updateAll();
                     currentScene.update();
+                    CollisionManager.instance.update();
+                    ControllerManager.instance.update();
                     repaint();
                 }
             }
@@ -116,11 +120,10 @@ import java.awt.image.BufferedImage;
         thread.start();
     }
 
-//    Image backgroundImage = Utils.loadImage("res/background/background1.png");
-
     @Override
     public void update(Graphics graphics) {
         currentScene.draw(backbufferGraphics);
+        ControllerManager.instance.draw(backbufferGraphics);
         GameObject.drawAll(backbufferGraphics);
         graphics.drawImage(backBufferImage, 0, 0, null);
     }

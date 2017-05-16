@@ -11,17 +11,24 @@ import java.awt.*;
 public class Controller {
     protected GameRect gameRect;
     protected SpriteRenderer spriteRenderer;
-    public Controller(){
+
+    public Controller() {
     }
-    public GameRect getGameRect(){ return gameRect;}
-    public Controller(GameRect gameRect,SpriteRenderer spriteRenderer){
-        this.gameRect=gameRect;
-        this.spriteRenderer=spriteRenderer;
+
+    public GameRect getGameRect() {
+        return gameRect;
     }
-    public void draw(Graphics graphics){
+
+    public Controller(GameRect gameRect, SpriteRenderer spriteRenderer) {
+        this.gameRect = gameRect;
+        this.spriteRenderer = spriteRenderer;
+    }
+
+    public void draw(Graphics graphics) {
         spriteRenderer.render(graphics, gameRect);
     }
-    public void update(){
+
+    public void update() {
 
     }
 }
