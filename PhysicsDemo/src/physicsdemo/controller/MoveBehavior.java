@@ -8,9 +8,6 @@ import physicsdemo.physics.Physics2D;
  */
 public class MoveBehavior {
     public void move(GameRect gameRect){
-        gameRect.move(5, Physics2D.GRAVITY);
-        if(gameRect.getX()==800){
-            gameRect.move(-5,Physics2D.GRAVITY);
-        }
+        gameRect.move(-6,0);
     }
 }

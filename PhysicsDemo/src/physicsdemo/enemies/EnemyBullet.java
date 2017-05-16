@@ -3,6 +3,7 @@ package physicsdemo.enemies;
 import physicsdemo.GameObject;
 import physicsdemo.GameRect;
 import physicsdemo.SpriteRenderer;
+import physicsdemo.controller.MoveBehavior;
 
 import java.awt.*;
 
@@ -11,9 +12,10 @@ import java.awt.*;
  */
 public class EnemyBullet extends GameObject{
 
-
+    private MoveBehavior moveBehavior;
     public EnemyBullet(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
+        moveBehavior = new MoveBehavior();
     }
 
     @Override
@@ -21,8 +23,12 @@ public class EnemyBullet extends GameObject{
         super.draw(graphics);
     }
 
+    public void setMoveBehavior(MoveBehavior moveBehavior) {
+        this.moveBehavior = moveBehavior;
+    }
+
     @Override
     public void update() {
-        gameRect.move(-6,0);
+        moveBehavior.move(gameRect);
     }
 }

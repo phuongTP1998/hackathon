@@ -30,7 +30,7 @@ private Animation animation;
         for(int i=500;i<900;i+=400){
             new EnemyController(new GameRect(500,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
         }
-        new SecondEnemyController(new GameRect(900,10,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
+        new SecondEnemyController(new GameRect(900,200,50,50),new SpriteRenderer("res/Minh/run-left-3.png"));
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"));
         new Ground(new GameRect(900,600,200,100),new SpriteRenderer("res/ground/ground4.png"));
         new Ground(new GameRect(1200,600,200,100),new SpriteRenderer("res/ground/ground4.png"));
