@@ -165,7 +165,7 @@ public class Cow extends GameObject implements Collider {
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
-    if(levelUp==true) {
+    if(!levelUp) {
         if (InputManager.getInstance().isSpace()) {
             if (isShootable) {
                 isShootable = false;

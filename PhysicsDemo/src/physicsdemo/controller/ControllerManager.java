@@ -30,6 +30,10 @@ public class ControllerManager {
         }
     }
 
+    public void remove(Controller controller) {
+        controllers.remove(controller);
+    }
+
     public void setClear(boolean clear) {
         this.clear = clear;
     }
