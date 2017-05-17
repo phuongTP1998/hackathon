@@ -14,5 +14,4 @@ public class FlyBehavior extends MoveBehavior {
             gameRect.move(-2, 0);
         }
     }
-
 }
