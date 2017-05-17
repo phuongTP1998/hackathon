@@ -37,12 +37,16 @@ public class Level1Scene implements GameScenes {
         }
         SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(900,200,50,50),new SpriteRenderer("res/Bat/bat-left-1.png"));
         ControllerManager.instance.add(secondEnemyController);
-       LevelUp levelUp= new LevelUp(new GameRect(850,400,100,100),new SpriteRenderer("res/Object/Crate.png"));
+
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"));
-        new Ground(new GameRect(900, 600, 200, 100), new SpriteRenderer("res/ground/ground4.png"));
-        new Ground(new GameRect(1200, 600, 200, 100), new SpriteRenderer("res/ground/ground4.png"));
-        new Ground(new GameRect(1500, 500, 200, 100), new SpriteRenderer("res/ground/ground4.png"));
-        new Ground(new GameRect(1700, 400, 200, 100), new SpriteRenderer("res/ground/ground4.png"));
+        new Ground(new GameRect(900,600,400,100),new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(1100,500,200,100),new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(1400,400,150,50),new SpriteRenderer("res/ground/ground3.png"));
+        new Ground(new GameRect(1700,600,900,100),new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(1900,500,100,100),new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(2200,500,100,100),new SpriteRenderer("res/ground/ground0.png"));
+        new Ground(new GameRect(2500,500,100,100),new SpriteRenderer("res/ground/ground0.png"));
+        Ground ground1= new Ground(new GameRect(2700,400,150,50),new SpriteRenderer("res/ground/ground3.png"));
         image = Utils.loadImage("res/background/background1.png");
         clip = Utils.playSound("res/music/level1-1.wav", false);
     }
@@ -64,5 +68,6 @@ public class Level1Scene implements GameScenes {
 
     @Override
     public void update() {
+
     }
 }
