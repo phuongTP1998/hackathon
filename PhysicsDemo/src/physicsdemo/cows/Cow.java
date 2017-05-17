@@ -187,11 +187,10 @@ public class Cow extends GameObject implements Collider {
         }
     }
         gameRect.move(dx, dy);
-//        if(playerHP<=0){
-//            GameWindow.instance.setCurrentScene(new WinScene());
-//            GameObject.removeAll();
-//            ControllerManager.instance.setClear(true);
-//        }
+        if(playerHP<=0){
+            GameWindow.instance.setCurrentScene(new WinScene());
+            ControllerManager.instance.setClear(true);
+        }
     }
 
     @Override

@@ -36,6 +36,7 @@ public class Level1Scene implements GameScenes {
             ControllerManager.instance.add(enemyController);
         }
         SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(900,200,50,50),new SpriteRenderer("res/Bat/bat-left-1.png"));
+
         ControllerManager.instance.add(secondEnemyController);
 
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"));

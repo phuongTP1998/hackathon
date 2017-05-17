@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Object/Crate.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/ground/ground4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/ground/ground6.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/ground/ground3.png" afterPath="$PROJECT_DIR$/res/ground/ground3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/GameObject.java" afterPath="$PROJECT_DIR$/src/physicsdemo/GameObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
     </list>
@@ -21,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="48" column="7" lean-forward="false" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+            <state relative-caret-position="-333">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -34,8 +30,8 @@
       <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            <state relative-caret-position="157">
+              <caret line="190" column="64" lean-forward="false" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,22 +39,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WinScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/WinScene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="66" selection-end-column="11" />
-              <folding>
-                <marker date="1495021342727" expanded="true" signature="1563:1569" ph="{...}" />
-                <marker date="1495021342727" expanded="true" signature="1571:1822" ph="//..." />
-                <marker date="1495021342727" expanded="true" signature="1876:2060" ph="{...}" />
-                <marker date="1495021342727" expanded="false" signature="2104:2115" ph=" { " />
-                <marker date="1495021342727" expanded="false" signature="2151:2157" ph=" }" />
-                <marker date="1495021342727" expanded="false" signature="2391:2402" ph=" { " />
-                <marker date="1495021342727" expanded="false" signature="2449:2455" ph=" }" />
-                <marker date="1495021342727" expanded="true" signature="2482:2489" ph="{...}" />
-                <marker date="1495021342727" expanded="true" signature="2520:2527" ph="{...}" />
-              </folding>
+            <state relative-caret-position="799">
+              <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +62,7 @@
       <file leaf-file-name="ControllerManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="238">
               <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -205,12 +201,12 @@
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/WinScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/cows/Milk.java" />
-        <option value="$PROJECT_DIR$/src/physicsdemo/GameObject.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyBullet.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/SecondEnemyController.java" />
-        <option value="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
+        <option value="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
+        <option value="$PROJECT_DIR$/src/physicsdemo/GameObject.java" />
       </list>
     </option>
   </component>
@@ -768,15 +764,15 @@
       <workItem from="1494855561620" duration="5002000" />
       <workItem from="1494904239016" duration="149000" />
       <workItem from="1494927321919" duration="6746000" />
-      <workItem from="1495022620328" duration="3643000" />
+      <workItem from="1495022620328" duration="5403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63362000" />
+    <option name="totallyTimeSpent" value="65122000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -893,17 +889,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1495021342727" expanded="true" signature="1563:1569" ph="{...}" />
-            <marker date="1495021342727" expanded="true" signature="1571:1822" ph="//..." />
-            <marker date="1495021342727" expanded="true" signature="1876:2060" ph="{...}" />
-            <marker date="1495021342727" expanded="false" signature="2104:2115" ph=" { " />
-            <marker date="1495021342727" expanded="false" signature="2151:2157" ph=" }" />
-            <marker date="1495021342727" expanded="false" signature="2391:2402" ph=" { " />
-            <marker date="1495021342727" expanded="false" signature="2449:2455" ph=" }" />
-            <marker date="1495021342727" expanded="true" signature="2482:2489" ph="{...}" />
-            <marker date="1495021342727" expanded="true" signature="2520:2527" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,46 +1066,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/WinScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Milk.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="25" column="39" lean-forward="true" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="66" selection-end-column="11" />
-          <folding>
-            <marker date="1495021342727" expanded="true" signature="1563:1569" ph="{...}" />
-            <marker date="1495021342727" expanded="true" signature="1571:1822" ph="//..." />
-            <marker date="1495021342727" expanded="true" signature="1876:2060" ph="{...}" />
-            <marker date="1495021342727" expanded="false" signature="2104:2115" ph=" { " />
-            <marker date="1495021342727" expanded="false" signature="2151:2157" ph=" }" />
-            <marker date="1495021342727" expanded="false" signature="2391:2402" ph=" { " />
-            <marker date="1495021342727" expanded="false" signature="2449:2455" ph=" }" />
-            <marker date="1495021342727" expanded="true" signature="2482:2489" ph="{...}" />
-            <marker date="1495021342727" expanded="true" signature="2520:2527" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1177,20 +1128,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="48" column="42" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+        <state relative-caret-position="-333">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/WinScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="48" column="7" lean-forward="false" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
+        <state relative-caret-position="4">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="190" column="64" lean-forward="false" selection-start-line="190" selection-start-column="64" selection-end-line="190" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
           <folding />
         </state>
       </provider>
