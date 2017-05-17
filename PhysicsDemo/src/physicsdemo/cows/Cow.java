@@ -165,7 +165,7 @@ public class Cow extends GameObject implements Collider {
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
         }
-    if(levelUp==true) {
+    if(!levelUp) {
         if (InputManager.getInstance().isSpace()) {
             if (isShootable) {
                 isShootable = false;
@@ -187,11 +187,10 @@ public class Cow extends GameObject implements Collider {
         }
     }
         gameRect.move(dx, dy);
-//        if(playerHP<=0){
-//            GameWindow.instance.setCurrentScene(new WinScene());
-//            GameObject.removeAll();
-//            ControllerManager.instance.setClear(true);
-//        }
+        if(playerHP<=0){
+            GameWindow.instance.setCurrentScene(new WinScene());
+            ControllerManager.instance.setClear(true);
+        }
     }
 
     @Override

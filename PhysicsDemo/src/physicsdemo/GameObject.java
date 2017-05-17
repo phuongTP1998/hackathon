@@ -47,19 +47,9 @@ public class GameObject extends Controller implements Collider {
     }
 
     public static void drawAll(Graphics graphics) {
-//        for (GameObject gameObject : gameObjects) {
-//            gameObject.draw(graphics);
-//        }
-//        Iterator<GameObject> iterator = gameObjects.iterator();
-//        while (iterator.hasNext()) {
-//            GameObject gameObject = iterator.next();
-//            gameObject.draw(graphics);
-//        }
-
         for(int i=0;i<gameObjects.size();i++){
             gameObjects.get(i).draw(graphics);
         }
-
     }
 
 //    public static void removeAll(){

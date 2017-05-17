@@ -8,6 +8,7 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.controller.MoveBehavior;
 import physicsdemo.cows.Cow;
+import physicsdemo.cows.Milk;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 
@@ -101,6 +102,8 @@ public class EnemyController extends GameObject implements Collider {
     public void onCollide(Collider other) {
         if (other instanceof Cow) {
             ((Cow) other).getHit(damage);
+        }else if (other instanceof Milk) {
+            ((Milk) other).getHit(damage);
         }
     }
 }
