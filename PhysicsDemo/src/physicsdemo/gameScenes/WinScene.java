@@ -2,6 +2,8 @@ package physicsdemo.gameScenes;
 
 import physicsdemo.GameRect;
 import physicsdemo.controller.BackGround;
+import physicsdemo.controller.CollisionManager;
+import physicsdemo.controller.ControllerManager;
 import physicsdemo.utils.Utils;
 
 import javax.sound.sampled.Clip;
@@ -15,8 +17,8 @@ public class WinScene implements GameScenes {
     private BackGround background_1, background_2;
     private Clip clip;
     public WinScene(){
-        background_1= new BackGround(0,0,1000,700, Utils.loadImage("res/game-background1.png"));
-        background_2= new BackGround(1000,0,1000,700, Utils.loadImage("res/game-background2.png"));
+        background_1= new BackGround(0,0,1000,700, Utils.loadImage("res/game-background1.jpg"));
+        background_2= new BackGround(1000,0,1000,700, Utils.loadImage("res/game-background2.jpg"));
     }
     @Override
     public void keyPressed(KeyEvent e) {

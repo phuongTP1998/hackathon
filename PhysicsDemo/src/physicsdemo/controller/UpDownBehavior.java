@@ -1,6 +1,7 @@
 package physicsdemo.controller;
 
 import physicsdemo.GameRect;
+import physicsdemo.gameScenes.Level1Scene;
 
 /**
  * Created by Quang Minh on 17/05/2017.
@@ -16,5 +17,6 @@ public class UpDownBehavior extends MoveBehavior {
             var = -var;
         }
         gameRect.move(0, var);
+        //Level1Scene.cow.getGameRect().move(0,var);
     }
 }

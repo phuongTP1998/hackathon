@@ -28,9 +28,9 @@ public class Level1Scene implements GameScenes {
     private Clip clip;
     private Animation animation;
     public static ArrayList<Milk> milks = new ArrayList<>();
+    public static Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
 
     public Level1Scene() {
-        Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
         cow.setMilks(milks);
         for (int i = 600; i <= 900; i += 300) {
             EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));

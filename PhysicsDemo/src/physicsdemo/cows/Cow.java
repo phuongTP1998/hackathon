@@ -190,6 +190,8 @@ public class Cow extends GameObject implements Collider {
         if(playerHP<=0){
             GameWindow.instance.setCurrentScene(new WinScene());
             ControllerManager.instance.setClear(true);
+            CollisionManager.instance.setClear(true);
+            GameObject.setClear(true);
         }
     }
 
