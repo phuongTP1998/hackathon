@@ -13,6 +13,8 @@ import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
 import physicsdemo.view.Camera;
+
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -32,6 +34,7 @@ public class Cow extends GameObject implements Collider {
     boolean isShootable = true;
     int countDownForShoot = 10;
     protected boolean levelUp =false;
+    private Clip soundJump, soundFight;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -158,16 +161,18 @@ public class Cow extends GameObject implements Collider {
         }
 
         // chỉnh camera stop 2 đầu Map
-        if (gameRect.getX() > 500) {
+        if (gameRect.getX() > 500&&gameRect.getX()<4450) {
             Camera.instanse.x += dx;
         }
 
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
+            soundJump=Utils.playSound("res/music/jump.wav",false);
         }
     if(!levelUp) {
         if (InputManager.getInstance().isSpace()) {
             if (isShootable) {
+                soundFight=Utils.playSound("res/music/scratch.wav",false);
                 isShootable = false;
                 Milk milk;
                 if (moveLeft) {

@@ -22,7 +22,7 @@ import java.util.ArrayList;
  * Created by trongphuong1011 on 5/11/2017.
  */
 public class Level1Scene implements GameScenes {
-    private Image image;
+    private Image image,image1;
     private Clip clip;
     private Animation animation;
     public static ArrayList<Milk> milks = new ArrayList<>();
@@ -38,15 +38,24 @@ public class Level1Scene implements GameScenes {
 
         ControllerManager.instance.add(secondEnemyController);
 
-        new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(900,600,400,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(1100,500,200,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(1400,400,150,50),new SpriteRenderer("res/ground/ground3.png"),new LeftRightBehavior());
-        new Ground(new GameRect(1700,600,900,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(1900,500,100,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(2200,500,100,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(2500,500,100,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        Ground ground1= new Ground(new GameRect(2700,400,150,50),new SpriteRenderer("res/ground/ground3.png"),null);
+        new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"),null);
+        new Ground(new GameRect(900,600,400,100),new SpriteRenderer("res/ground/ground01.png"),null);
+        new Ground(new GameRect(1120,500,200,200),new SpriteRenderer("res/ground/ground111.png"),null);
+        new Ground(new GameRect(1500,400,150,50),new SpriteRenderer("res/ground/ground3.png"),new LeftRightBehavior());
+        new Ground(new GameRect(1820,600,900,100),new SpriteRenderer("res/ground/ground10.png"),null);
+        new Ground(new GameRect(2000,520,140,100),new SpriteRenderer("res/ground/ground11.png"),null);
+        new Ground(new GameRect(2300,522,140,100),new SpriteRenderer("res/ground/ground11.png"),null);
+        new Ground(new GameRect(2580,520,140,100),new SpriteRenderer("res/ground/ground11.png"),null);
+        new Ground(new GameRect(2800,450,150,50),new SpriteRenderer("res/ground/ground3.png"),null);
+        new Ground(new GameRect(3000,350,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(3200,450,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(3400,350,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(3600,250,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(3800,350,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(4000,450,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(4200,350,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(4400,450,100,50),new SpriteRenderer("res/ground/ground001.png"),null);
+        new Ground(new GameRect(4600,500,400,200),new SpriteRenderer("res/ground/ground111.png"),null);
         image = Utils.loadImage("res/background/background1.png");
         clip = Utils.playSound("res/music/level1-1.wav", false);
     }
