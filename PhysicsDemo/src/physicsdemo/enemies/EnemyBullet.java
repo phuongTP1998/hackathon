@@ -30,6 +30,7 @@ public class EnemyBullet extends GameObject implements Collider {
     }
 
     public void getHit(int damage) {
+
         gameRect.setDead(true);
         CollisionManager.instance.remove(this);
         GameObject.remove(this);
@@ -48,6 +49,9 @@ public class EnemyBullet extends GameObject implements Collider {
     @Override
     public void update() {
         moveBehavior.move(gameRect);
+        if (gameRect.getX() < 0 || gameRect.getY() > 700) {
+            getHit(0);
+        }
     }
 
     @Override

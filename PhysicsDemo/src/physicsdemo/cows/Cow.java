@@ -6,8 +6,7 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
-import physicsdemo.gameScenes.Level1Scene;
-import physicsdemo.gameScenes.WinScene;
+import physicsdemo.gameScenes.LoseScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -33,7 +32,7 @@ public class Cow extends GameObject implements Collider {
     boolean moveLeft;
     boolean isShootable = true;
     int countDownForShoot = 10;
-    protected boolean levelUp =false;
+    protected boolean levelUp = false;
     private Clip soundJump, soundFight;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
@@ -100,7 +99,7 @@ public class Cow extends GameObject implements Collider {
 
         if (InputManager.getInstance().isRight()) {
             moveLeft = false;
-            dx += 5;
+            dx += 7;
             ArrayList<Image> images = new ArrayList<Image>();
             {
                 images.add(Utils.loadImage("res/Minh/run-right-1.png"));
@@ -113,7 +112,7 @@ public class Cow extends GameObject implements Collider {
 
         if (InputManager.getInstance().isLeft()) {
             moveLeft = true;
-            dx -= 5;
+            dx -= 7;
             ArrayList<Image> images = new ArrayList<Image>();
             {
                 images.add(Utils.loadImage("res/Minh/run-left-1.png"));
@@ -161,39 +160,39 @@ public class Cow extends GameObject implements Collider {
         }
 
         // chỉnh camera stop 2 đầu Map
-        if (gameRect.getX() > 500&&gameRect.getX()<4450) {
+        if (gameRect.getX() > 500 && gameRect.getX() < 4450) {
             Camera.instanse.x += dx;
         }
 
         if (InputManager.getInstance().isUp() && isGrounded) {
             dy = -30;
-            soundJump=Utils.playSound("res/music/jump.wav",false);
+            soundJump = Utils.playSound("res/music/jump.wav", false);
         }
-    if(!levelUp) {
-        if (InputManager.getInstance().isSpace()) {
-            if (isShootable) {
-                soundFight=Utils.playSound("res/music/scratch.wav",false);
-                isShootable = false;
-                Milk milk;
-                if (moveLeft) {
-                    milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-left.png"));
-                    milk.setMoveLeft(true);
+        if (!levelUp) {
+            if (InputManager.getInstance().isSpace()) {
+                if (isShootable) {
+                    soundFight = Utils.playSound("res/music/scratch.wav", false);
+                    isShootable = false;
+                    Milk milk;
+                    if (moveLeft) {
+                        milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-left.png"));
+                        milk.setMoveLeft(true);
+                    } else {
+                        milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-right.png"));
+                        milk.setMoveLeft(false);
+                    }
                 } else {
-                    milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-right.png"));
-                    milk.setMoveLeft(false);
-                }
-            } else {
-                countDownForShoot--;
-                if (countDownForShoot == 0) {
-                    countDownForShoot = 10;
-                    isShootable = true;
+                    countDownForShoot--;
+                    if (countDownForShoot == 0) {
+                        countDownForShoot = 10;
+                        isShootable = true;
+                    }
                 }
             }
         }
-    }
         gameRect.move(dx, dy);
-        if(playerHP<=0){
-            GameWindow.instance.setCurrentScene(new WinScene());
+        if (playerHP <= 0) {
+            GameWindow.instance.setCurrentScene(new LoseScene());
             ControllerManager.instance.setClear(true);
             CollisionManager.instance.setClear(true);
             GameObject.setClear(true);
@@ -210,8 +209,8 @@ public class Cow extends GameObject implements Collider {
             ((EnemyController) other).getHit(damage);
             playerHP = playerHP - 1;
         }
-        if(other instanceof LevelUp){
-            ((LevelUp) other ).getHit(damage);
+        if (other instanceof LevelUp) {
+            ((LevelUp) other).getHit(damage);
             System.out.println(" Level Up");
             setLevelUp(true);
             setPlayerHP(30);
