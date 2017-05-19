@@ -1,5 +1,6 @@
 package physicsdemo.gameScenes;
 
+import physicsdemo.GameObject;
 import physicsdemo.GameRect;
 
 import physicsdemo.GameWindow;
@@ -50,24 +51,24 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(2300, 522, 140, 100), new SpriteRenderer("res/ground/ground11.png"), null);
         new Ground(new GameRect(2580, 520, 140, 100), new SpriteRenderer("res/ground/ground11.png"), null);
         new Ground(new GameRect(2800, 450, 150, 50), new SpriteRenderer("res/ground/ground3.png"), null);
-//        new Ground(new GameRect(3000, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(3200, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(3400, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(3600, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(3800, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(4000, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-//        new Ground(new GameRect(4400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3000, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3200, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3400, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3600, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3800, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4000, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
 
 
-        new Ground(new GameRect(3000, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(3200, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(3400, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(3600, 250, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(3800, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(4000, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(4400, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(3000, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(3200, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(3400, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(3600, 250, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(3800, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(4000, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
+//        new Ground(new GameRect(4400, 450, 100, 50), new SpriteRenderer("res/ground/ground01.png"), null);
         new Ground(new GameRect(4600, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
         image = Utils.loadImage("res/background/background1.png");
         GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
@@ -90,6 +91,5 @@ public class Level1Scene implements GameScenes {
 
     @Override
     public void update() {
-
     }
 }

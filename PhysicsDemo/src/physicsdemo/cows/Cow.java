@@ -25,7 +25,7 @@ public class Cow extends GameObject implements Collider {
     private int dx;
     private int dy;
     private boolean isGrounded;
-    private int playerHP = 10;
+    private int playerHP = 5;
     private Animation animation;
     private int damage = 1;
     private ArrayList<Milk> milks;
@@ -34,6 +34,7 @@ public class Cow extends GameObject implements Collider {
     int countDownForShoot = 10;
     protected boolean levelUp = false;
     private Clip soundJump, soundFight;
+    private Image hp1,hp2;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -51,6 +52,8 @@ public class Cow extends GameObject implements Collider {
         animation = new Animation(images);
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
+        hp2=Utils.loadImage("res/hp2.png");
+        hp1=Utils.loadImage("res/hp1.png");
     }
 
     public void setMilks(ArrayList<Milk> milks) {
@@ -89,6 +92,22 @@ public class Cow extends GameObject implements Collider {
     @Override
     public void draw(Graphics graphics) {
         animation.draw(graphics, gameRect);
+        graphics.drawImage(hp2,50,50,100,20,null);
+        if(playerHP==5){
+            graphics.drawImage(hp1,50,50,100,20,null);
+        }
+        if(playerHP==4){
+            graphics.drawImage(hp1,50,50,80,20,null);
+        }
+        if(playerHP==3) {
+            graphics.drawImage(hp1, 50, 50, 60, 20, null);
+        }
+        if(playerHP==2) {
+            graphics.drawImage(hp1, 50, 50, 40, 20, null);
+        }
+        if(playerHP==1) {
+            graphics.drawImage(hp1, 50, 50, 20, 20, null);
+        }
     }
 
     @Override
