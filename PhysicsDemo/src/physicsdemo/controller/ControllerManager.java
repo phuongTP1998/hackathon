@@ -45,6 +45,7 @@ public class ControllerManager {
                 Controller controller = iterator.next();
                 iterator.remove();
             }
+           // controllers =null;
         }
         Iterator<Controller> iterator = controllers.iterator();
         while (iterator.hasNext()) {

@@ -15,7 +15,7 @@ import java.util.Vector;
 public class GameObject extends Controller implements Collider {
     protected GameRect gameRect;
     protected SpriteRenderer spriteRenderer;
-    boolean clear = false;
+    static boolean clear = false;
 
 
     private static List<GameObject> gameObjects;
@@ -28,8 +28,19 @@ public class GameObject extends Controller implements Collider {
         return gameObjects;
     }
 
+    public static void setClear(boolean clear) {
+        GameObject.clear = clear;
+    }
 
     public static void updateAll() {
+        if (clear == true) {
+            Iterator<GameObject> iterator = gameObjects.iterator();
+            while (iterator.hasNext()) {
+                GameObject gameObject = iterator.next();
+                iterator.remove();
+            }
+            // controllers =null;
+        }
         for (int i = 0; i < gameObjects.size(); i++) {
             gameObjects.get(i).update();
         }
