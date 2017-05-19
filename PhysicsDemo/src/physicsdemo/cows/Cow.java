@@ -25,7 +25,7 @@ public class Cow extends GameObject implements Collider {
     private int dx;
     private int dy;
     private boolean isGrounded;
-    private int playerHP = 5;
+    private int playerHP = 10;
     private Animation animation;
     private int damage = 1;
     private ArrayList<Milk> milks;
@@ -93,20 +93,35 @@ public class Cow extends GameObject implements Collider {
     public void draw(Graphics graphics) {
         animation.draw(graphics, gameRect);
         graphics.drawImage(hp2,50,50,100,20,null);
-        if(playerHP==5){
-            graphics.drawImage(hp1,50,50,100,20,null);
+        if(playerHP==10) {
+            graphics.drawImage(hp1, 50, 50, 100, 20, null);
         }
-        if(playerHP==4){
-            graphics.drawImage(hp1,50,50,80,20,null);
+        if(playerHP==9) {
+            graphics.drawImage(hp1, 50, 50, 90, 20, null);
         }
-        if(playerHP==3) {
+        if(playerHP==8) {
+            graphics.drawImage(hp1, 50, 50, 80, 20, null);
+        }
+        if(playerHP==7) {
+            graphics.drawImage(hp1, 50, 50, 70, 20, null);
+        }
+        if(playerHP==6) {
             graphics.drawImage(hp1, 50, 50, 60, 20, null);
         }
+        if(playerHP==5){
+            graphics.drawImage(hp1,50,50,50,20,null);
+        }
+        if(playerHP==4){
+            graphics.drawImage(hp1,50,50,40,20,null);
+        }
+        if(playerHP==3) {
+            graphics.drawImage(hp1, 50, 50, 30, 20, null);
+        }
         if(playerHP==2) {
-            graphics.drawImage(hp1, 50, 50, 40, 20, null);
+            graphics.drawImage(hp1, 50, 50, 20, 20, null);
         }
         if(playerHP==1) {
-            graphics.drawImage(hp1, 50, 50, 20, 20, null);
+            graphics.drawImage(hp1, 50, 50, 10, 20, null);
         }
     }
 
