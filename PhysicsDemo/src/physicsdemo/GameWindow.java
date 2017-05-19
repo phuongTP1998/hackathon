@@ -4,6 +4,7 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
 import physicsdemo.gameScenes.GameScenes;
+import physicsdemo.gameScenes.Level2Scene;
 import physicsdemo.gameScenes.MenuScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.utils.Utils;
