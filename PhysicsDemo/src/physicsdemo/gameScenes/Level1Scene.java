@@ -2,12 +2,10 @@ package physicsdemo.gameScenes;
 
 import physicsdemo.GameRect;
 
-import physicsdemo.GameWindow;
 import physicsdemo.SpriteRenderer;
 import physicsdemo.controller.ControllerManager;
-import physicsdemo.controller.UpDownBehavior;
+import physicsdemo.controller.LeftRightBehavior;
 import physicsdemo.cows.Cow;
-import physicsdemo.cows.LevelUp;
 import physicsdemo.cows.Milk;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.enemies.SecondEnemyController;
@@ -43,7 +41,7 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(0, 600, 800, 100), new SpriteRenderer("res/ground/ground0.png"),null);
         new Ground(new GameRect(900,600,400,100),new SpriteRenderer("res/ground/ground0.png"),null);
         new Ground(new GameRect(1100,500,200,100),new SpriteRenderer("res/ground/ground0.png"),null);
-        new Ground(new GameRect(1400,400,150,50),new SpriteRenderer("res/ground/ground3.png"),new UpDownBehavior());
+        new Ground(new GameRect(1400,400,150,50),new SpriteRenderer("res/ground/ground3.png"),new LeftRightBehavior());
         new Ground(new GameRect(1700,600,900,100),new SpriteRenderer("res/ground/ground0.png"),null);
         new Ground(new GameRect(1900,500,100,100),new SpriteRenderer("res/ground/ground0.png"),null);
         new Ground(new GameRect(2200,500,100,100),new SpriteRenderer("res/ground/ground0.png"),null);
