@@ -12,6 +12,7 @@ import physicsdemo.cows.Milk;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.enemies.SecondEnemyController;
 import physicsdemo.obstacles.Ground;
+import physicsdemo.obstacles.MilkBottle;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
 
@@ -55,6 +56,8 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(5100, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
         new Ground(new GameRect(5450, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
         new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
+        new MilkBottle(new GameRect(6000,500,50,100),new SpriteRenderer("res/milkbottle/milkbottle.png"));
+
         image = Utils.loadImage("res/SCREEN/background3.png");
         EnemyController enemyController1 = new EnemyController(new GameRect(900, -10, 50, 60), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
         EnemyController enemyController2 = new EnemyController(new GameRect(50, -10, 50, 60), new SpriteRenderer("res/Minh/run-left-3.png"));

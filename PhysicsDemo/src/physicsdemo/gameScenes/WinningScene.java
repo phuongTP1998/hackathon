@@ -16,7 +16,7 @@ public class WinningScene implements GameScenes{
     private Image image;
 
     public WinningScene() {
-        image= Utils.loadImage("res/phobo.jpg");
+        image= Utils.loadImage("res/SCREEN/win-screen.png");
         GameWindow.instance.clip.close();
     }
 

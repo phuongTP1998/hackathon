@@ -102,6 +102,7 @@ public class Cow extends GameObject implements Collider {
         avatar = Utils.loadImage("res/avatar.png");
     }
 
+
     public void setMilks(ArrayList<Milk> milks) {
         this.milks = milks;
     }
