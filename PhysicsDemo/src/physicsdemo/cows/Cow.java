@@ -30,10 +30,10 @@ public class Cow extends GameObject implements Collider {
     private int playerHP = 12;
     private Animation animationLeft;
     private Animation animationRight;
+    private Animation animationStayLeft;
+    private Animation animationStayRight;
     private Animation animationJumpLeft;
     private Animation animationJumpRight;
-    private Animation animationFallLeft;
-    private Animation animationFallRight;
     private int damage = 1;
     private ArrayList<Milk> milks;
     boolean moveLeft;
@@ -68,6 +68,20 @@ public class Cow extends GameObject implements Collider {
         }
         animationRight = new Animation(imagesRight);
 
+        ArrayList<Image> imagesStayRight = new ArrayList<Image>();
+        {
+            imagesStayRight.add(Utils.loadImage("res/coww/cow-right-1.png"));
+            imagesStayRight.add(Utils.loadImage("res/coww/cow-right-5.png"));
+        }
+        animationStayRight = new Animation(imagesStayRight);
+
+        ArrayList<Image> imagesStayLeft = new ArrayList<Image>();
+        {
+            imagesStayLeft.add(Utils.loadImage("res/coww/cow-left-1.png"));
+            imagesStayLeft.add(Utils.loadImage("res/coww/cow-left-5.png"));
+        }
+        animationStayLeft = new Animation(imagesStayLeft);
+
         ArrayList<Image> imagesJumpLeft = new ArrayList<Image>();
         {
             imagesJumpLeft.add(Utils.loadImage("res/coww/cow-jump-left.png"));
@@ -80,23 +94,11 @@ public class Cow extends GameObject implements Collider {
         }
         animationJumpRight = new Animation(imagesJumpRight);
 
-        ArrayList<Image> imagesFallRight = new ArrayList<Image>();
-        {
-            imagesFallRight.add(Utils.loadImage("res/coww/fall_right.png"));
-        }
-        animationFallRight = new Animation(imagesFallRight);
-
-        ArrayList<Image> imagesFallLeft = new ArrayList<Image>();
-        {
-            imagesFallLeft.add(Utils.loadImage("res/coww/fall_left.png"));
-        }
-        animationFallLeft = new Animation(imagesFallLeft);
-
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
         hp2 = Utils.loadImage("res/hp2.png");
         hp1 = Utils.loadImage("res/hp1.png");
-        avatar= Utils.loadImage("res/avatar.png");
+        avatar = Utils.loadImage("res/avatar.png");
     }
 
     public void setMilks(ArrayList<Milk> milks) {
@@ -136,10 +138,18 @@ public class Cow extends GameObject implements Collider {
     public void draw(Graphics graphics) {
 
         if (isGrounded) {
-            if (isLeft) {
-                animationLeft.draw(graphics, gameRect);
+            if (dx == 0) {
+                if (isLeft) {
+                    animationStayLeft.draw(graphics, gameRect);
+                } else {
+                    animationStayRight.draw(graphics, gameRect);
+                }
             } else {
-                animationRight.draw(graphics, gameRect);
+                if (isLeft) {
+                    animationLeft.draw(graphics, gameRect);
+                } else {
+                    animationRight.draw(graphics, gameRect);
+                }
             }
         } else {
 
@@ -150,7 +160,7 @@ public class Cow extends GameObject implements Collider {
             }
         }
 
-        graphics.drawImage(avatar,30,50,50,50,null);
+        graphics.drawImage(avatar, 30, 50, 50, 50, null);
         graphics.drawImage(hp2, 80, 65, 100, 20, null);
         if (playerHP == 10) {
             graphics.drawImage(hp1, 80, 65, 100, 20, null);
@@ -196,7 +206,7 @@ public class Cow extends GameObject implements Collider {
             isLeft = false;
         }
 
-        if (InputManager.getInstance().isLeft() && gameRect.getX()>10) {
+        if (InputManager.getInstance().isLeft() && gameRect.getX() > 10) {
             moveLeft = true;
             dx -= 7;
             isLeft = true;
@@ -204,13 +214,13 @@ public class Cow extends GameObject implements Collider {
 
 
 // tạo que cho chú Bò
-        GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() +7 + dy);
+        GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() + 7 + dy);
         {
             if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
                 dy = 0;
                 isGrounded = true;
-                if(gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)){
-                    int deviation = ((LeftRightBehavior)(((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
+                if (gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
                     gameRect.move(deviation, 0);
                     Camera.instanse.x += deviation;
                 }
