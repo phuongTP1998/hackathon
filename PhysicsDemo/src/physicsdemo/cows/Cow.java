@@ -166,6 +166,8 @@ public class Cow extends GameObject implements Collider {
         dy += Physics2D.GRAVITY;
         isGrounded = false;
 
+        System.out.println("cow update");
+
         if (InputManager.getInstance().isRight()) {
             moveLeft = false;
             dx += 7;
