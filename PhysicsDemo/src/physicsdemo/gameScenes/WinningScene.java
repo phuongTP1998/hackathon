@@ -6,6 +6,7 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.utils.Utils;
 
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
@@ -14,10 +15,12 @@ import java.awt.event.KeyEvent;
  */
 public class WinningScene implements GameScenes{
     private Image image;
+    private Clip clip;
 
     public WinningScene() {
         image= Utils.loadImage("res/SCREEN/win-screen.png");
         GameWindow.instance.clip.close();
+        GameWindow.instance.clip = Utils.playSound("res/music/winsound.wav", true);
     }
 
     @Override
