@@ -26,7 +26,7 @@ public class Cow extends GameObject implements Collider {
     private int dx;
     private int dy;
     private boolean isGrounded;
-    private int playerHP = 11;
+    private int playerHP = 12;
     private Animation animationLeft;
     private Animation animationRight;
     private Animation animationJumpLeft;
@@ -289,7 +289,7 @@ public class Cow extends GameObject implements Collider {
         }
         if (other instanceof EnemyController) {
             ((EnemyController) other).getHit(damage);
-            playerHP = playerHP - 1;
+            playerHP = playerHP - 2;
         }
         if (other instanceof LevelUp) {
             ((LevelUp) other).getHit(damage);
