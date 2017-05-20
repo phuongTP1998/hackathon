@@ -242,7 +242,7 @@ public class Cow extends GameObject implements Collider {
         }
 
         // chỉnh camera stop 2 đầu Map
-        if (gameRect.getX() > 500 && gameRect.getX() < 5800) {
+        if (gameRect.getX() > 500 && gameRect.getX() < 5600) {
             Camera.instanse.x += dx;
         }
 
