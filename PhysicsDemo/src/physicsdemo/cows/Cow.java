@@ -124,7 +124,6 @@ public class Cow extends GameObject implements Collider {
                 imagesJumpRight.add(Utils.loadImage("res/coww/cow-jump-right.png"));
             }
             animationJumpRight= new Animation(imagesJumpRight);
-            
             animationJumpRight.draw(graphics,gameRect);
         }
 

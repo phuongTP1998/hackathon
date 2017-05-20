@@ -2,8 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-jump-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-jump-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-4.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,21 +143,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuScene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuScene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="125">
+              <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="126" column="12" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+            <state relative-caret-position="1315">
+              <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -214,7 +244,6 @@
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/UpDownBehavior.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/CollisionManager.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/LeftRightBehavior.java" />
-        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/WinScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/obstacles/Ground.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyBullet.java" />
@@ -229,6 +258,7 @@
         <option value="$PROJECT_DIR$/src/physicsdemo/GameWindow.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
+        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
       </list>
     </option>
   </component>
@@ -366,28 +396,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physicsdemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cows" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhysicsDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhysicsDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -406,7 +414,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="coww" />
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -890,12 +902,12 @@
       <workItem from="1495179818575" duration="3638000" />
       <workItem from="1495205881398" duration="1614000" />
       <workItem from="1495250092143" duration="1170000" />
-      <workItem from="1495253745429" duration="2912000" />
+      <workItem from="1495253745429" duration="4205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82600000" />
+    <option name="totallyTimeSpent" value="83893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1212,14 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1262,8 +1266,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="126" column="12" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+        <state relative-caret-position="1315">
+          <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
           <folding />
         </state>
       </provider>
