@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/cow-shoot-01 - Copy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/cow-shoot-01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/milkbullet-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/milkbullet-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/music/menu.wav" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Bat-Scaled.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Dragon-Scaled.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/bullet-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/bullet-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/death_scythe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/full-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/game-background1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/game-background2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/landscape.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/luggage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/magicpot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/magicpot/0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/magicpot/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/magicpot/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/magicpot/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/map1.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/GameObject.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/GameObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/enemies/SecondEnemyController.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/enemies/SecondEnemyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/GameObject.java" afterPath="$PROJECT_DIR$/src/physicsdemo/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" afterPath="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
-    </list>
+    <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,21 +42,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="34">
+              <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="164" column="15" lean-forward="true" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
+            <state relative-caret-position="183">
+              <caret line="181" column="21" lean-forward="true" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Milk.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Milk.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -140,16 +120,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecondEnemyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/physicsdemo/enemies/SecondEnemyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="66" lean-forward="false" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -858,12 +828,12 @@
       <workItem from="1495205881398" duration="1614000" />
       <workItem from="1495250092143" duration="1170000" />
       <workItem from="1495253745429" duration="13813000" />
-      <workItem from="1495270586563" duration="343000" />
+      <workItem from="1495270586563" duration="2372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93844000" />
+    <option name="totallyTimeSpent" value="95873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1104,14 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Milk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/Program.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1192,14 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="164" column="15" lean-forward="true" selection-start-line="164" selection-start-column="15" selection-end-line="164" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1220,8 +1174,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Milk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="181" column="21" lean-forward="true" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
           <folding />
         </state>
       </provider>
