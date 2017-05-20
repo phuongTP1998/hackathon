@@ -2,16 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Bat.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Minh.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/bahamut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/bahamut.rar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/goldbat.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/goldbat.rar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat- back-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat- back-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat- back-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat- back-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-forward-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-forward-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-forward-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-forward-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-left-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-left-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-left-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-left-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-right-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-right-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-right-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Bat-Scaled/Bat/bat-right-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-back-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-back-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-back-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-back-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-forward-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-forward-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-forward-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-forward-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-left-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-left-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-left-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-left-4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-right-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-right-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-right-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/Dragon-Scaled/Minh/run-right-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
                 <element signature="e#1321#1322#0" expanded="true" />
                 <element signature="e#1380#1381#0" expanded="true" />
@@ -99,11 +127,11 @@
       <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+            <state relative-caret-position="142">
+              <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
               <folding>
-                <marker date="1495266268134" expanded="false" signature="4226:4237" ph=" { " />
-                <marker date="1495266268134" expanded="false" signature="4286:4292" ph=" }" />
+                <marker date="1495266293271" expanded="false" signature="4900:4911" ph=" { " />
+                <marker date="1495266293271" expanded="false" signature="4960:4966" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -808,12 +836,12 @@
       <workItem from="1495179818575" duration="3638000" />
       <workItem from="1495205881398" duration="1614000" />
       <workItem from="1495250092143" duration="1170000" />
-      <workItem from="1495253745429" duration="10437000" />
+      <workItem from="1495253745429" duration="10477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90125000" />
+    <option name="totallyTimeSpent" value="90165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1157,7 +1185,7 @@
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
             <element signature="e#1321#1322#0" expanded="true" />
             <element signature="e#1380#1381#0" expanded="true" />
@@ -1183,11 +1211,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
+        <state relative-caret-position="142">
+          <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding>
-            <marker date="1495266268134" expanded="false" signature="4226:4237" ph=" { " />
-            <marker date="1495266268134" expanded="false" signature="4286:4292" ph=" }" />
+            <marker date="1495266293271" expanded="false" signature="4900:4911" ph=" { " />
+            <marker date="1495266293271" expanded="false" signature="4960:4966" ph=" }" />
           </folding>
         </state>
       </provider>
