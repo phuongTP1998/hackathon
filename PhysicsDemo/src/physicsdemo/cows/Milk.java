@@ -42,13 +42,12 @@ public class Milk extends GameObject implements Collider {
         CollisionManager.instance.remove(this);
         GameObject.remove(this);
         ControllerManager.instance.remove(this);
-        Level1Scene.milks.remove(this);
+        Level1Scene.instance.milks.remove(this);
     }
 
     @Override
     public void onCollide(Collider other) {
         if (other instanceof EnemyController) {
-
             ((EnemyController) other).getHit(damage);
         }
     }
@@ -57,7 +56,7 @@ public class Milk extends GameObject implements Collider {
         super(gameRect, spriteRenderer);
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
-        Level1Scene.milks.add(this);
+        Level1Scene.instance.milks.add(this);
         cowNow = gameRect;
     }
 

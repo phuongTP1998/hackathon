@@ -48,6 +48,9 @@ public class EnemyBullet extends GameObject implements Collider {
     @Override
     public void update() {
         moveBehavior.move(gameRect);
+        if (gameRect.getX() < 0 || gameRect.getY() > 700) {
+            getHit(0);
+        }
     }
 
     @Override

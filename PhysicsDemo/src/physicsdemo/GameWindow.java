@@ -4,10 +4,12 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.cows.Cow;
 import physicsdemo.gameScenes.GameScenes;
+import physicsdemo.gameScenes.Level2Scene;
 import physicsdemo.gameScenes.MenuScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.utils.Utils;
 
+import javax.sound.sampled.Clip;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -26,7 +28,7 @@ public class GameWindow extends Frame {
     InputManager inputManager;
     GameScenes currentScene;
     public static GameWindow instance;
-
+    public Clip clip;
     public void setCurrentScene(GameScenes currentScene) {
         this.currentScene = currentScene;
     }
