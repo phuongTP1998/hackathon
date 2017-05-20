@@ -50,10 +50,10 @@ public class EnemyController extends GameObject implements Collider {
         animationLeft = new Animation(imagesLeft,5,false);
 
         ArrayList<Image> imagesRight = new ArrayList<>();
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-1.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-2.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-3.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-4.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-1.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-2.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-3.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-4.png"));
         animationRight = new Animation(imagesRight,5,false);
     }
 
