@@ -196,7 +196,7 @@ public class Cow extends GameObject implements Collider {
             isLeft = false;
         }
 
-        if (InputManager.getInstance().isLeft()) {
+        if (InputManager.getInstance().isLeft() && gameRect.getX()>10) {
             moveLeft = true;
             dx -= 7;
             isLeft = true;
