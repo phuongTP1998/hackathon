@@ -23,7 +23,8 @@ public class MenuScene implements GameScenes {
         cow= Utils.loadImage("res/menu/menu/COW004.png");
       logo=Utils.loadImage("res/menu/menu/Logo.png");
       text=Utils.loadImage("res/menu/menu/text.png");
-      GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
+
+        GameWindow.instance.clip = Utils.playSound("res/music/menu.wav", true);
     }
 
     @Override

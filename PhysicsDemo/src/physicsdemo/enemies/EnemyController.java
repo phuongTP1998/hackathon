@@ -43,17 +43,25 @@ public class EnemyController extends GameObject implements Collider {
         ControllerManager.instance.add(this);
 
         ArrayList<Image> imagesLeft = new ArrayList<>();
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-1.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-2.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-3.png"));
-        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-4.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_1.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_2.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_3.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_4.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_5.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_6.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_7.png"));
+        imagesLeft.add(Utils.loadImage("res/walkEnemy/walkEnemy_left_8.png"));
         animationLeft = new Animation(imagesLeft,10,false);
 
         ArrayList<Image> imagesRight = new ArrayList<>();
-        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-1.png"));
-        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-2.png"));
-        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-3.png"));
-        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-4.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_1.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_2.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_3.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_4.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_5.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_6.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_7.png"));
+        imagesRight.add(Utils.loadImage("res/walkEnemy/walkEnemy_right_8.png"));
         animationRight = new Animation(imagesRight,10,false);
     }
 
@@ -119,10 +127,10 @@ public class EnemyController extends GameObject implements Collider {
             dx = 0;
         } else {
             if (gameRect.getX() <= initPosX) {
-                dx = 2;
+                dx = 1;
                 isLeft = false;
             } else if (gameRect.getX() >= initPosX + 150) {
-                dx = -2;
+                dx = -1;
                 isLeft= true;
             }
         }
