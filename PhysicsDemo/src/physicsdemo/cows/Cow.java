@@ -4,8 +4,10 @@ import physicsdemo.*;
 import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
+import physicsdemo.controller.LeftRightBehavior;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
+import physicsdemo.gameScenes.Level1Scene;
 import physicsdemo.gameScenes.LoseScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
@@ -205,8 +207,12 @@ public class Cow extends GameObject implements Collider {
         {
             if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
                 dy = 0;
-                GameRect groundRect = gameObjectCenterDown.getGameRect();
                 isGrounded = true;
+                if(gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)){
+                    int deviation = ((LeftRightBehavior)(((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                }
             }
         }
         GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
@@ -266,6 +272,10 @@ public class Cow extends GameObject implements Collider {
             }
         }
         gameRect.move(dx, dy);
+//        if(dx>0){
+//        }else if(dx<0){
+//
+//        }
         if (gameRect.getY() > 800 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             Camera.instanse.x = 0;
@@ -291,6 +301,5 @@ public class Cow extends GameObject implements Collider {
             setLevelUp(true);
             setPlayerHP(30);
         }
-
     }
 }

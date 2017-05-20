@@ -19,7 +19,8 @@ public class LoseScene implements GameScenes {
     private BackGround background_1, background_2;
     private Image image;
     public LoseScene(){
-        image= Utils.loadImage("res/lost-screen-02.png");
+        System.out.println("LOSEEEEEEEEEEEEEEEEE");
+        image= Utils.loadImage("res/SCREEN/lost-screen-02.png");
         GameWindow.instance.clip.close();
         GameWindow.instance.clip = Utils.playSound("res/music/loseSound.wav", false);
     }
