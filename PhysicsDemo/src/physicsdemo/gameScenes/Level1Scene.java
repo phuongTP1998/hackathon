@@ -35,21 +35,7 @@ public class Level1Scene implements GameScenes {
     public Level1Scene() {
 //        instance = this;
         cow.setMilks(milks);
-        EnemyController enemyController1 = new EnemyController(new GameRect(900, -10, 50, 60), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
-        EnemyController enemyController2 = new EnemyController(new GameRect(50, -10, 50, 60), new SpriteRenderer("res/Minh/run-left-3.png"));
-        enemyController1.setShootEnable(false);
-        ControllerManager.instance.add(enemyController1);
-        ControllerManager.instance.add(enemyController2);
-        for (int i = 3200; i <= 4000; i += 800) {
-            SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 50, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
-            ControllerManager.instance.add(secondEnemyController);
-        }
 
-        for (int i = 2350; i <= 2800; i += 450) {
-            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
-            enemyController.setShootEnable(false);
-            ControllerManager.instance.add(enemyController);
-        }
 
         new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
         new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
@@ -70,6 +56,21 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(5450, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
         new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
         image = Utils.loadImage("res/SCREEN/background3.png");
+        EnemyController enemyController1 = new EnemyController(new GameRect(900, -10, 50, 60), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
+        EnemyController enemyController2 = new EnemyController(new GameRect(50, -10, 50, 60), new SpriteRenderer("res/Minh/run-left-3.png"));
+        enemyController1.setShootEnable(false);
+        ControllerManager.instance.add(enemyController1);
+        ControllerManager.instance.add(enemyController2);
+        for (int i = 3200; i <= 4000; i += 800) {
+            SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 50, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
+            ControllerManager.instance.add(secondEnemyController);
+        }
+
+        for (int i = 2450; i <= 2900; i += 450) {
+            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
+            enemyController.setShootEnable(false);
+            ControllerManager.instance.add(enemyController);
+        }
         GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", true);
     }
 

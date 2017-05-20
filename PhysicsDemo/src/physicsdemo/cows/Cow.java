@@ -214,42 +214,90 @@ public class Cow extends GameObject implements Collider {
 
 
 // tạo que cho chú Bò
-        GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() + 7 + dy);
-        {
-            if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
+        if (dy > 0) {
+            GameObject gameObjectBottomCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() + 7 + dy);
+            GameObject gameObjectBottomLeft = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + 7 + dy);
+            GameObject gameObjectBottomRight = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + 7 + dy);
+            if ((gameObjectBottomCenter != null && gameObjectBottomCenter instanceof Ground)
+                    || (gameObjectBottomLeft != null && gameObjectBottomLeft instanceof Ground)
+                    || (gameObjectBottomRight != null && gameObjectBottomRight instanceof Ground)) {
                 dy = 0;
                 isGrounded = true;
-                if (gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)) {
-                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
+                if (gameObjectBottomCenter != null && ((((Ground) gameObjectBottomCenter).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomCenter).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                } else if (gameObjectBottomLeft != null && ((((Ground) gameObjectBottomLeft).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomLeft).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                } else if (gameObjectBottomRight != null && ((((Ground) gameObjectBottomRight).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomRight).getMoveBehavior())).getDeviation();
                     gameRect.move(deviation, 0);
                     Camera.instanse.x += deviation;
                 }
             }
-        }
-        GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
-        if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
-            dx = 0;
-        }
-
-        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
-        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
-            dx = 0;
-        }
-
-        GameObject gameObjectRightTop = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getY());
-        if (gameObjectRightTop != null && gameObjectRightTop instanceof Ground) {
-            dx = 0;
+        } else {
+            GameObject gameObjectTopCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
+            GameObject gameObjectTopLeft = GameObject.objectAt(gameRect.getRight(), gameRect.getY() + dy);
+            GameObject gameObjectTopRight = GameObject.objectAt(gameRect.getX(), gameRect.getY() + dy);
+            if ((gameObjectTopCenter != null && gameObjectTopCenter instanceof Ground)
+                    || (gameObjectTopLeft != null && gameObjectTopLeft instanceof Ground)
+                    || (gameObjectTopRight != null && gameObjectTopRight instanceof Ground)) {
+                dy = 0;
+            }
         }
 
-        GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
-        if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
-            dx = 0;
+
+        if (dx > 0) {
+            GameObject gameObjectRightTop = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getY());
+            if (gameObjectRightTop != null && gameObjectRightTop instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectRightMid = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getCenterY());
+            if (gameObjectRightMid != null && gameObjectRightMid instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
+            if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
+                dx = 0;
+            }
+        } else {
+            GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
+            if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectLeftMid = GameObject.objectAt(gameRect.getX() + dx, gameRect.getCenterY());
+            if (gameObjectLeftMid != null && gameObjectLeftMid instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
+            if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
+                dx = 0;
+            }
         }
 
-        GameObject gameObjectUpCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
-        if (gameObjectUpCenter != null && gameObjectUpCenter instanceof Ground) {
-            dy = 0;
-        }
+
+//        GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
+//        if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
+//            dx = 0;
+//        }
+
+//        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
+//        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
+//            dx = 0;
+//        }
+
+
+//        GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
+//        if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
+//            dx = 0;
+//        }
+
+//        GameObject gameObjectUpCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
+//        if (gameObjectUpCenter != null && gameObjectUpCenter instanceof Ground) {
+//            dy = 0;
+//        }
 
         // chỉnh camera stop 2 đầu Map
         if (gameRect.getX() > 500 && gameRect.getX() < 5600) {
