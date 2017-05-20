@@ -9,6 +9,7 @@ import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.gameScenes.Level1Scene;
 import physicsdemo.gameScenes.LoseScene;
+import physicsdemo.gameScenes.WinningScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
 import physicsdemo.utils.Utils;
@@ -184,6 +185,14 @@ public class Cow extends GameObject implements Collider {
         }
     }
 
+    public void win(){
+        GameWindow.instance.setCurrentScene(new WinningScene());
+        Camera.instanse.x = 0;
+        ControllerManager.instance.setClear(true);
+        CollisionManager.instance.setClear(true);
+        GameObject.setClear(true);
+    }
+
     @Override
     public void update() {
         dx = 0;
@@ -284,6 +293,7 @@ public class Cow extends GameObject implements Collider {
             CollisionManager.instance.setClear(true);
             GameObject.setClear(true);
         }
+        //check win
     }
 
     @Override
