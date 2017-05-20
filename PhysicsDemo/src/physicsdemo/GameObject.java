@@ -17,7 +17,6 @@ public class GameObject extends Controller implements Collider {
     protected SpriteRenderer spriteRenderer;
     static boolean clear = false;
 
-
     private static List<GameObject> gameObjects;
 
     static {

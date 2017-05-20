@@ -25,7 +25,7 @@ public class Cow extends GameObject implements Collider {
     private int dx;
     private int dy;
     private boolean isGrounded;
-    private int playerHP = 10;
+    private int playerHP = 100;
     private Animation animation;
     private int damage = 1;
     private ArrayList<Milk> milks;
@@ -225,7 +225,7 @@ public class Cow extends GameObject implements Collider {
             }
         }
         gameRect.move(dx, dy);
-        if (playerHP <= 0) {
+        if (gameRect.getY()>700 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             ControllerManager.instance.setClear(true);
             CollisionManager.instance.setClear(true);
