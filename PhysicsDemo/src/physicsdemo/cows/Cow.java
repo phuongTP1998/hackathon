@@ -6,6 +6,7 @@ import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
+import physicsdemo.gameScenes.Level1Scene;
 import physicsdemo.gameScenes.LoseScene;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
@@ -267,6 +268,10 @@ public class Cow extends GameObject implements Collider {
             }
         }
         gameRect.move(dx, dy);
+//        if(dx>0){
+//        }else if(dx<0){
+//
+//        }
         if (gameRect.getY() > 800 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             Camera.instanse.x = 0;

@@ -18,7 +18,7 @@ public class BackGround extends Controller {
     public void update() {
         gameRect.move(-1, 0);
         if (gameRect.getX() <= -1000) {
-            gameRect.setX(1000);
+            gameRect.setX(3000);
         }
     }
 }
