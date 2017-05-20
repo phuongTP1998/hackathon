@@ -27,7 +27,8 @@ public class Level1Scene implements GameScenes {
 
     public static Level1Scene instance;
     public ArrayList<Milk> milks = new ArrayList<>();
-    public Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
+    SpriteRenderer spriteRenderer = new SpriteRenderer("res/coww/cow-right-1.png");
+    public Cow cow = new Cow(new GameRect(50, 10, spriteRenderer.getImage().getWidth(null), spriteRenderer.getImage().getHeight(null)), spriteRenderer );
 
     public Level1Scene() {
         System.out.println("Scene 1");
