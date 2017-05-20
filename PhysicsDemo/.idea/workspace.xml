@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/Tiles/9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-jump-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-jump-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-left-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/cow/cow-right-4.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/menu/Logo.png" afterPath="$PROJECT_DIR$/res/menu/menu/Logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/menu/text.png" afterPath="$PROJECT_DIR$/res/menu/menu/text.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,7 +33,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-              <folding />
+              <folding>
+                <marker date="1495257972829" expanded="true" signature="1902:1980" ph="{...}" />
+                <marker date="1495257972829" expanded="true" signature="2045:2538" ph="{...}" />
+                <marker date="1495257972829" expanded="true" signature="2445:2532" ph="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,10 +71,13 @@
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
               <folding>
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
+                <marker date="1495257972821" expanded="false" signature="854:865" ph=" { " />
+                <marker date="1495257972821" expanded="false" signature="896:902" ph=" }" />
+                <marker date="1495257972821" expanded="true" signature="943:954" ph=" { " />
+                <marker date="1495257972821" expanded="true" signature="973:979" ph=" }" />
+                <marker date="1495257972821" expanded="true" signature="1006:1672" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -118,7 +98,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
-              <folding />
+              <folding>
+                <marker date="1495257972852" expanded="true" signature="3897:3905" ph="{...}" />
+                <marker date="1495257972852" expanded="true" signature="3961:3969" ph="{...}" />
+                <marker date="1495257972852" expanded="false" signature="4024:4035" ph=" { " />
+                <marker date="1495257972852" expanded="false" signature="4084:4090" ph=" }" />
+                <marker date="1495257972852" expanded="true" signature="4131:4138" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,8 +132,8 @@
       <file leaf-file-name="MenuScene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+            <state relative-caret-position="227">
+              <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -902,12 +888,12 @@
       <workItem from="1495179818575" duration="3638000" />
       <workItem from="1495205881398" duration="1614000" />
       <workItem from="1495250092143" duration="1170000" />
-      <workItem from="1495253745429" duration="4205000" />
+      <workItem from="1495253745429" duration="5187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83893000" />
+    <option name="totallyTimeSpent" value="84875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1204,7 +1190,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1495257972829" expanded="true" signature="1902:1980" ph="{...}" />
+            <marker date="1495257972829" expanded="true" signature="2045:2538" ph="{...}" />
+            <marker date="1495257972829" expanded="true" signature="2445:2532" ph="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1240,10 +1230,13 @@
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/controller/ControllerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="43" column="40" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <caret line="44" column="40" lean-forward="false" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
           <folding>
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
+            <marker date="1495257972821" expanded="false" signature="854:865" ph=" { " />
+            <marker date="1495257972821" expanded="false" signature="896:902" ph=" }" />
+            <marker date="1495257972821" expanded="true" signature="943:954" ph=" { " />
+            <marker date="1495257972821" expanded="true" signature="973:979" ph=" }" />
+            <marker date="1495257972821" expanded="true" signature="1006:1672" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1260,7 +1253,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
-          <folding />
+          <folding>
+            <marker date="1495257972852" expanded="true" signature="3897:3905" ph="{...}" />
+            <marker date="1495257972852" expanded="true" signature="3961:3969" ph="{...}" />
+            <marker date="1495257972852" expanded="false" signature="4024:4035" ph=" { " />
+            <marker date="1495257972852" expanded="false" signature="4084:4090" ph=" }" />
+            <marker date="1495257972852" expanded="true" signature="4131:4138" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1274,8 +1273,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+        <state relative-caret-position="227">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding />
         </state>
       </provider>

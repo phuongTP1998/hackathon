@@ -21,7 +21,7 @@ public class MenuScene implements GameScenes {
       image= Utils.loadImage("res/menu/menu/3.jpg");
       logo=Utils.loadImage("res/menu/menu/Logo.png");
       text=Utils.loadImage("res/menu/menu/text.png");
-        GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
+      GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
     }
 
     @Override
@@ -40,8 +40,8 @@ public class MenuScene implements GameScenes {
     @Override
     public void draw(Graphics graphics) {
        graphics.drawImage(image,0,0,1000,700,null);
-        graphics.drawImage(logo,400,300,200,200,null);
-        graphics.drawImage(text,400,500,300,100,null);
+        graphics.drawImage(logo,300,100,400,400,null);
+        graphics.drawImage(text,150,500,700,150,null);
     }
 
     @Override
