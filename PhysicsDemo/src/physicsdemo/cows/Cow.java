@@ -4,6 +4,7 @@ import physicsdemo.*;
 import physicsdemo.Collider;
 import physicsdemo.controller.CollisionManager;
 import physicsdemo.controller.ControllerManager;
+import physicsdemo.controller.LeftRightBehavior;
 import physicsdemo.enemies.EnemyBullet;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.gameScenes.Level1Scene;
@@ -206,8 +207,12 @@ public class Cow extends GameObject implements Collider {
         {
             if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
                 dy = 0;
-                GameRect groundRect = gameObjectCenterDown.getGameRect();
                 isGrounded = true;
+                if(gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)){
+                    int deviation = ((LeftRightBehavior)(((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                }
             }
         }
 
@@ -297,6 +302,5 @@ public class Cow extends GameObject implements Collider {
             setLevelUp(true);
             setPlayerHP(30);
         }
-
     }
 }

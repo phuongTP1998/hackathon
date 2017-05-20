@@ -6,7 +6,11 @@ import physicsdemo.GameRect;
  * Created by Quang Minh on 17/05/2017.
  */
 public class LeftRightBehavior extends MoveBehavior {
-    int deviation = 1;
+    public int deviation = 1;
+
+    public int getDeviation() {
+        return deviation;
+    }
 
     public void move(GameRect gameRect) {
         if (gameRect.getX() >= 1550) {

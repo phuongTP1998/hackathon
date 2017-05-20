@@ -14,6 +14,10 @@ import physicsdemo.cows.Milk;
 public class Ground extends GameObject implements Collider{
     private MoveBehavior moveBehavior;
 
+    public MoveBehavior getMoveBehavior() {
+        return moveBehavior;
+    }
+
     public Ground(GameRect gameRect, SpriteRenderer spriteRenderer, MoveBehavior moveBehavior) {
         super(gameRect, spriteRenderer);
         this.moveBehavior = moveBehavior;
