@@ -18,11 +18,11 @@ public class MenuScene implements GameScenes {
     private Image image, logo, text, cow;
 
     public MenuScene() {
-        cow= Utils.loadImage("res/menu/menu/COW004.png");
-      image= Utils.loadImage("res/menu/menu/3.jpg");
-      logo=Utils.loadImage("res/menu/menu/Logo.png");
-      text=Utils.loadImage("res/menu/menu/text.png");
-      GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
+        cow = Utils.loadImage("res/menu/menu/COW004.png");
+        image = Utils.loadImage("res/menu/menu/3.jpg");
+        logo = Utils.loadImage("res/menu/menu/Logo.png");
+        text = Utils.loadImage("res/menu/menu/text.png");
+        GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
     }
 
     @Override
@@ -34,16 +34,17 @@ public class MenuScene implements GameScenes {
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             GameWindow.instance.clip.close();
-            GameWindow.instance.setCurrentScene(new Level1Scene());
+            Level1Scene lvl1scene = new Level1Scene();
+            GameWindow.instance.setCurrentScene(lvl1scene);
         }
     }
 
     @Override
     public void draw(Graphics graphics) {
-       graphics.drawImage(image,0,0,1000,700,null);
-        graphics.drawImage(logo,250,100,400,400,null);
-        graphics.drawImage(text,150,500,700,150,null);
-        graphics.drawImage(cow,620,100,350,300,null);
+        graphics.drawImage(image, 0, 0, 1000, 700, null);
+        graphics.drawImage(logo, 250, 100, 400, 400, null);
+        graphics.drawImage(text, 150, 500, 700, 150, null);
+        graphics.drawImage(cow, 620, 100, 350, 300, null);
     }
 
     @Override

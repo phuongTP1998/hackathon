@@ -33,10 +33,12 @@ public class LoseScene implements GameScenes {
     public void keyReleased(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             GameWindow.instance.clip.close();
-            GameWindow.instance.setCurrentScene(new Level1Scene());
+            
             ControllerManager.instance.setClear(false);
             CollisionManager.instance.setClear(false);
             GameObject.setClear(false);
+            Level1Scene lvl1scene = new Level1Scene();
+            GameWindow.instance.setCurrentScene(lvl1scene);
         }
     }
 
