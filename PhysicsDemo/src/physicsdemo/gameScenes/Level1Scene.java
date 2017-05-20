@@ -27,7 +27,8 @@ public class Level1Scene implements GameScenes {
 
     //    public static Level1Scene instance;
     public ArrayList<Milk> milks = new ArrayList<>();
-    public Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
+    SpriteRenderer spriteRenderer = new SpriteRenderer("res/coww/cow-right-1.png");
+    public Cow cow = new Cow(new GameRect(50, 10, spriteRenderer.getImage().getWidth(null), spriteRenderer.getImage().getHeight(null)), spriteRenderer );
 
     public Level1Scene() {
         System.out.println("Scene 1");
@@ -45,20 +46,20 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
         new Ground(new GameRect(1120, 500, 200, 200), new SpriteRenderer("res/ground/ground111.png"), null);
         new Ground(new GameRect(1500, 400, 150, 50), new SpriteRenderer("res/ground/ground3.png"), new LeftRightBehavior());
-        new Ground(new GameRect(1820, 600, 900, 100), new SpriteRenderer("res/ground/ground10.png"), null);
-        new Ground(new GameRect(2000, 520, 140, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(2300, 522, 140, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(2580, 520, 140, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(2800, 450, 150, 50), new SpriteRenderer("res/ground/ground3.png"), null);
-        new Ground(new GameRect(3000, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(3200, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(3400, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(3600, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(3800, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4000, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4600, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
+        new Ground(new GameRect(1820, 600, 1400, 100), new SpriteRenderer("res/ground/ground10.png"), null);
+        new Ground(new GameRect(2100, 520, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(2550, 522, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(3000, 520, 226, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(3400, 450, 150, 50), new SpriteRenderer("res/ground/ground3.png"), null);
+        new Ground(new GameRect(3600, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3800, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4100, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4300, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4500, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4700, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5000, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
         image = Utils.loadImage("res/background/background1.png");
         GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
     }
