@@ -25,7 +25,8 @@ public class ControllerManager {
     }
 
     public void draw(Graphics graphics) {
-        for (Controller controller : controllers) {
+        for(int i = 0; i < controllers.size(); i++){
+            Controller controller = controllers.get(i);
             controller.draw(graphics);
         }
     }

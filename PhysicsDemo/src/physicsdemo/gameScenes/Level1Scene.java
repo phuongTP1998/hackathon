@@ -25,21 +25,21 @@ public class Level1Scene implements GameScenes {
     private Image image, image1;
     private Animation animation;
 
-    public static Level1Scene instance;
+    //    public static Level1Scene instance;
     public ArrayList<Milk> milks = new ArrayList<>();
     public Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
 
     public Level1Scene() {
         System.out.println("Scene 1");
-        instance = this;
+//        instance = this;
         cow.setMilks(milks);
-        for (int i = 600; i <= 900; i += 300) {
-            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
-            ControllerManager.instance.add(enemyController);
+        EnemyController enemyController = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        enemyController.setShootEnable(false);
+        ControllerManager.instance.add(enemyController);
+        for (int i = 3200; i <= 4000; i += 800) {
+            SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 150, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
+            ControllerManager.instance.add(secondEnemyController);
         }
-        SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(900, 200, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
-
-        ControllerManager.instance.add(secondEnemyController);
 
         new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
         new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);

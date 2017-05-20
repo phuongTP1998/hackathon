@@ -23,6 +23,7 @@ public class EnemyController extends GameObject implements Collider {
     private MoveBehavior moveBehavior;
     private boolean isGrounded;
     private boolean isLeft;
+    private boolean shootEnable;
     private int cooldown = 200;
     protected int initPosX;
     private int damage = 1;
@@ -36,6 +37,10 @@ public class EnemyController extends GameObject implements Collider {
         initPosX = gameRect.getX();
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
+    }
+
+    public void setShootEnable(boolean shootEnable) {
+        this.shootEnable = shootEnable;
     }
 
     public void getHit(int damage) {
@@ -78,10 +83,13 @@ public class EnemyController extends GameObject implements Collider {
             }
             isGrounded = true;
         }
-        cooldown--;
-        if (cooldown <= 0) {
-            shooting();
-            cooldown = 100;
+
+        if(shootEnable){
+            cooldown--;
+            if (cooldown <= 0) {
+                shooting();
+                cooldown = 100;
+            }
         }
 
         //move behavior
