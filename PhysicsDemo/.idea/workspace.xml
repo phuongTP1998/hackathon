@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/startext-02-02.png" afterPath="$PROJECT_DIR$/res/startext-02-02.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +27,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoseScene.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoseScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="23" column="85" lean-forward="false" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+              <caret line="23" column="85" lean-forward="true" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -47,18 +50,18 @@
       <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="138" column="56" lean-forward="true" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
+            <state relative-caret-position="177">
+              <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -107,8 +110,8 @@
       <file leaf-file-name="MenuScene.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+            <state relative-caret-position="585">
+              <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -218,10 +221,10 @@
         <option value="$PROJECT_DIR$/src/physicsdemo/GameObject.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/SecondEnemyController.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" />
+        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
-        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" />
       </list>
     </option>
   </component>
@@ -845,12 +848,12 @@
       <workItem from="1495250092143" duration="1170000" />
       <workItem from="1495253745429" duration="13813000" />
       <workItem from="1495270586563" duration="343000" />
-      <workItem from="1495281550989" duration="1265000" />
+      <workItem from="1495281550989" duration="2289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101491000" />
+    <option name="totallyTimeSpent" value="102515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1148,14 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1190,26 +1185,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="85" lean-forward="true" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="183">
+          <caret line="76" column="48" lean-forward="false" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="138" column="56" lean-forward="true" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="85" lean-forward="false" selection-start-line="23" selection-start-column="85" selection-end-line="23" selection-end-column="85" />
+        <state relative-caret-position="177">
+          <caret line="210" column="9" lean-forward="false" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
           <folding />
         </state>
       </provider>

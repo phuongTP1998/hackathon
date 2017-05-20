@@ -74,7 +74,7 @@ public class Level1Scene implements GameScenes {
             ControllerManager.instance.add(enemyController);
         }
         
-        image = Utils.loadImage("res/background/background1.png");
+        image = Utils.loadImage("res/background3.png");
         GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", true);
     }
 

@@ -209,7 +209,6 @@ public class Cow extends GameObject implements Collider {
                 isGrounded = true;
             }
         }
-
         GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
         if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
             dx = 0;
