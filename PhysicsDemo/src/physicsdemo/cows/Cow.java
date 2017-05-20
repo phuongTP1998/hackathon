@@ -232,10 +232,10 @@ public class Cow extends GameObject implements Collider {
                     isShootable = false;
                     Milk milk;
                     if (moveLeft) {
-                        milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-left.png"));
+                        milk = new Milk(this.gameRect, new SpriteRenderer("res/milkbullet-left.png"));
                         milk.setMoveLeft(true);
                     } else {
-                        milk = new Milk(this.gameRect, new SpriteRenderer("res/bullet-right.png"));
+                        milk = new Milk(this.gameRect, new SpriteRenderer("res/milkbullet-2.png"));
                         milk.setMoveLeft(false);
                     }
                 } else {
@@ -250,6 +250,7 @@ public class Cow extends GameObject implements Collider {
         gameRect.move(dx, dy);
         if (gameRect.getY()>800 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
+            Camera.instanse.x=0;
             ControllerManager.instance.setClear(true);
             CollisionManager.instance.setClear(true);
             GameObject.setClear(true);

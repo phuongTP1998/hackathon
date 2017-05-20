@@ -62,13 +62,6 @@ public class GameObject extends Controller implements Collider {
         }
     }
 
-//    public static void removeAll(){
-//        Iterator<GameObject> iterator = gameObjects.iterator();
-//        while (iterator.hasNext()) {
-//            GameObject gameObject1 = iterator.next();
-//            iterator.remove();
-//        }
-//    }
 
     public static GameObject objectAt(int x, int y) {
         for (GameObject gameObject : gameObjects) {
