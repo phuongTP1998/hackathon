@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/cow-shoot-left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/cow-shoot-right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/fall_left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/coww/fall_right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_left_8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/walkEnemy/walkEnemy_right_8.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/coww/cow-shoot-01 - Copy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/coww/cow-shoot-01.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/cows/Cow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/enemies/EnemyController.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/enemies/EnemyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" afterPath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/MenuScene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-jump-right.png" afterPath="$PROJECT_DIR$/res/coww/cow-jump-right.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-left-1.png" afterPath="$PROJECT_DIR$/res/coww/cow-left-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-left-2.png" afterPath="$PROJECT_DIR$/res/coww/cow-left-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-left-3.png" afterPath="$PROJECT_DIR$/res/coww/cow-left-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-left-4.png" afterPath="$PROJECT_DIR$/res/coww/cow-left-4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-right-1.png" afterPath="$PROJECT_DIR$/res/coww/cow-right-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-right-2.png" afterPath="$PROJECT_DIR$/res/coww/cow-right-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-right-3.png" afterPath="$PROJECT_DIR$/res/coww/cow-right-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/coww/cow-right-4.png" afterPath="$PROJECT_DIR$/res/coww/cow-right-4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/ground/ground3.png" afterPath="$PROJECT_DIR$/res/ground/ground3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" afterPath="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PhysicsDemo/physicsdemo/gameScenes/Level1Scene.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Level1Scene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-276">
-              <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="266">
+              <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -141,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1047">
@@ -919,7 +880,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99834000" />
+    <option name="totallyTimeSpent" value="100043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -928,7 +889,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32649842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32565284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1284,14 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/physics/Physics2D.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1312,6 +1265,14 @@
             <element signature="e#2883#2890#0" expanded="true" />
             <element signature="e#3108#3115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="61" column="48" lean-forward="true" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
