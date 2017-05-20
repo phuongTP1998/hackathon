@@ -30,6 +30,7 @@ public class Level1Scene implements GameScenes {
     public Cow cow = new Cow(new GameRect(50, 10, 100, 100), new SpriteRenderer("res/Minh/run-right-1.png"));
 
     public Level1Scene() {
+        System.out.println("Scene 1");
         instance = this;
         cow.setMilks(milks);
         for (int i = 600; i <= 900; i += 300) {

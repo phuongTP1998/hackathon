@@ -18,6 +18,7 @@ import java.awt.event.KeyEvent;
 public class LoseScene implements GameScenes {
     private BackGround background_1, background_2;
     public LoseScene(){
+        System.out.println("LOSEEEEEEEEEEEEEEEEE");
         background_1= new BackGround(0,0,1000,700, Utils.loadImage("res/game-background1.jpg"));
         background_2= new BackGround(1000,0,1000,700, Utils.loadImage("res/game-background2.jpg"));
         GameWindow.instance.clip.close();
