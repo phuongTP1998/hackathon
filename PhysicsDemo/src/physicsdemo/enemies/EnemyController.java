@@ -11,8 +11,11 @@ import physicsdemo.cows.Cow;
 import physicsdemo.cows.Milk;
 import physicsdemo.obstacles.Ground;
 import physicsdemo.physics.Physics2D;
+import physicsdemo.utils.Utils;
+import physicsdemo.view.Animation;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * Created by Quang Minh on 13/05/2017.
@@ -22,12 +25,13 @@ public class EnemyController extends GameObject implements Collider {
     protected int dy;
     private MoveBehavior moveBehavior;
     private boolean isGrounded;
-    private boolean isLeft;
+    private boolean isLeft=false;
     private boolean shootEnable;
     private int cooldown = 200;
     protected int initPosX;
     private int damage = 1;
-
+    private Animation animationLeft;
+    private Animation animationRight;
 
     public EnemyController(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -37,6 +41,20 @@ public class EnemyController extends GameObject implements Collider {
         initPosX = gameRect.getX();
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
+
+        ArrayList<Image> imagesLeft = new ArrayList<>();
+        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-1.png"));
+        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-2.png"));
+        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-3.png"));
+        imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-4.png"));
+        animationLeft = new Animation(imagesLeft,5,false);
+
+        ArrayList<Image> imagesRight = new ArrayList<>();
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-1.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-2.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-3.png"));
+        imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-4.png"));
+        animationRight = new Animation(imagesRight,5,false);
     }
 
     public void setShootEnable(boolean shootEnable) {
@@ -51,7 +69,11 @@ public class EnemyController extends GameObject implements Collider {
 
     @Override
     public void draw(Graphics graphics) {
-        super.draw(graphics);
+        if(isLeft){
+            animationLeft.draw(graphics,gameRect);
+        } else {
+            animationRight.draw(graphics,gameRect);
+        }
     }
 
     public int getDamage() {
@@ -98,8 +120,10 @@ public class EnemyController extends GameObject implements Collider {
         } else {
             if (gameRect.getX() <= initPosX) {
                 dx = 2;
+                isLeft = false;
             } else if (gameRect.getX() >= initPosX + 150) {
                 dx = -2;
+                isLeft= true;
             }
         }
 
