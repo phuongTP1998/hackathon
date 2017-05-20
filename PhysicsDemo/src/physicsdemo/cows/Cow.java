@@ -26,7 +26,8 @@ public class Cow extends GameObject implements Collider {
     private int dy;
     private boolean isGrounded;
     private int playerHP = 100;
-    private Animation animation;
+    private Animation animationLeft;
+    private Animation animationRight;
     private int damage = 1;
     private ArrayList<Milk> milks;
     boolean moveLeft;
@@ -35,6 +36,7 @@ public class Cow extends GameObject implements Collider {
     protected boolean levelUp = false;
     private Clip soundJump, soundFight;
     private Image hp1,hp2;
+    private boolean isLeft=false;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
         super(gameRect, spriteRenderer);
@@ -42,14 +44,24 @@ public class Cow extends GameObject implements Collider {
         dy = 0;
         milks = new ArrayList<>();
         // mặc định animation lúc đầu
-        ArrayList<Image> images = new ArrayList<Image>();
+        ArrayList<Image> imagesLeft = new ArrayList<Image>();
         {
-            images.add(Utils.loadImage("res/Minh/run-forward-1.png"));
-            images.add(Utils.loadImage("res/Minh/run-forward-2.png"));
-            images.add(Utils.loadImage("res/Minh/run-forward-3.png"));
-            images.add(Utils.loadImage("res/Minh/run-forward-4.png"));
+            imagesLeft.add(Utils.loadImage("res/Minh/run-left-1.png"));
+            imagesLeft.add(Utils.loadImage("res/Minh/run-left-2.png"));
+            imagesLeft.add(Utils.loadImage("res/Minh/run-left-3.png"));
+            imagesLeft.add(Utils.loadImage("res/Minh/run-left-4.png"));
         }
-        animation = new Animation(images);
+        animationLeft = new Animation(imagesLeft);
+
+        ArrayList<Image> imagesRight = new ArrayList<Image>();
+        {
+            imagesRight.add(Utils.loadImage("res/Minh/run-right-1.png"));
+            imagesRight.add(Utils.loadImage("res/Minh/run-right-2.png"));
+            imagesRight.add(Utils.loadImage("res/Minh/run-right-3.png"));
+            imagesRight.add(Utils.loadImage("res/Minh/run-right-4.png"));
+        }
+        animationRight= new Animation(imagesRight);
+
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
         hp2=Utils.loadImage("res/hp2.png");
@@ -91,7 +103,11 @@ public class Cow extends GameObject implements Collider {
 
     @Override
     public void draw(Graphics graphics) {
-        animation.draw(graphics, gameRect);
+        if(isLeft){
+            animationLeft.draw(graphics,gameRect);
+        } else {
+            animationRight.draw(graphics,gameRect);
+        }
         graphics.drawImage(hp2,50,50,100,20,null);
         if(playerHP==10) {
             graphics.drawImage(hp1, 50, 50, 100, 20, null);
@@ -134,27 +150,13 @@ public class Cow extends GameObject implements Collider {
         if (InputManager.getInstance().isRight()) {
             moveLeft = false;
             dx += 7;
-            ArrayList<Image> images = new ArrayList<Image>();
-            {
-                images.add(Utils.loadImage("res/Minh/run-right-1.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-2.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-3.png"));
-                images.add(Utils.loadImage("res/Minh/run-right-4.png"));
-            }
-            animation = new Animation(images);
+            isLeft=false;
         }
 
         if (InputManager.getInstance().isLeft()) {
             moveLeft = true;
             dx -= 7;
-            ArrayList<Image> images = new ArrayList<Image>();
-            {
-                images.add(Utils.loadImage("res/Minh/run-left-1.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-2.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-3.png"));
-                images.add(Utils.loadImage("res/Minh/run-left-4.png"));
-            }
-            animation = new Animation(images);
+            isLeft=true;
         }
 
 
