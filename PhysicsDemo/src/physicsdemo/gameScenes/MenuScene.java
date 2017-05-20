@@ -15,12 +15,14 @@ import java.awt.event.KeyEvent;
  */
 public class MenuScene implements GameScenes {
     private BackGround background_1, background_2;
+    private Image image, logo, text, cow;
 
     public MenuScene() {
-        background_1 = new BackGround(0, 0, 1000, 700, Utils.loadImage("res/background/background1.png"));
-        background_2 = new BackGround(1000, 0, 1000, 700, Utils.loadImage("res/background/background2.png"));
-
-        GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
+        cow= Utils.loadImage("res/menu/menu/COW004.png");
+      image= Utils.loadImage("res/menu/menu/3.jpg");
+      logo=Utils.loadImage("res/menu/menu/Logo.png");
+      text=Utils.loadImage("res/menu/menu/text.png");
+      GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
     }
 
     @Override
@@ -38,13 +40,14 @@ public class MenuScene implements GameScenes {
 
     @Override
     public void draw(Graphics graphics) {
-        background_1.draw(graphics);
-        background_2.draw(graphics);
+       graphics.drawImage(image,0,0,1000,700,null);
+        graphics.drawImage(logo,250,100,400,400,null);
+        graphics.drawImage(text,150,500,700,150,null);
+        graphics.drawImage(cow,620,100,350,300,null);
     }
 
     @Override
     public void update() {
-        background_1.update();
-        background_2.update();
+
     }
 }

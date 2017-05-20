@@ -17,10 +17,10 @@ import java.awt.event.KeyEvent;
  */
 public class LoseScene implements GameScenes {
     private BackGround background_1, background_2;
+    private Image image;
     public LoseScene(){
         System.out.println("LOSEEEEEEEEEEEEEEEEE");
-        background_1= new BackGround(0,0,1000,700, Utils.loadImage("res/game-background1.jpg"));
-        background_2= new BackGround(1000,0,1000,700, Utils.loadImage("res/game-background2.jpg"));
+        image= Utils.loadImage("res/phobo.jpg");
         GameWindow.instance.clip.close();
         GameWindow.instance.clip = Utils.playSound("res/music/loseSound.wav", false);
     }
@@ -42,13 +42,10 @@ public class LoseScene implements GameScenes {
 
     @Override
     public void draw(Graphics graphics) {
-        background_1.draw(graphics);
-        background_2.draw(graphics);
+        graphics.drawImage(image,0,0,1000,700,null);
     }
 
     @Override
     public void update() {
-//        background_1.update();
-//        background_2.update();
     }
 }
