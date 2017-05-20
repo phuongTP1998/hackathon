@@ -25,7 +25,7 @@ public class Cow extends GameObject implements Collider {
     private int dx;
     private int dy;
     private boolean isGrounded;
-    private int playerHP = 100;
+    private int playerHP = 11;
     private Animation animationLeft;
     private Animation animationRight;
     private Animation animationJumpLeft;
