@@ -187,10 +187,10 @@ public class Cow extends GameObject implements Collider {
             graphics.drawImage(hp1, 80, 65, 30, 20, null);
         }
         if (playerHP == 2) {
-            graphics.drawImage(hp1, 80, 50, 20, 20, null);
+            graphics.drawImage(hp1, 80, 65, 20, 20, null);
         }
         if (playerHP == 1) {
-            graphics.drawImage(hp1, 80, 50, 10, 20, null);
+            graphics.drawImage(hp1, 80, 65, 10, 20, null);
         }
     }
 
