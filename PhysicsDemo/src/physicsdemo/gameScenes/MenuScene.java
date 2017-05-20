@@ -15,9 +15,10 @@ import java.awt.event.KeyEvent;
  */
 public class MenuScene implements GameScenes {
     private BackGround background_1, background_2;
-    private Image image, logo, text;
+    private Image image, logo, text, cow;
 
     public MenuScene() {
+        cow= Utils.loadImage("res/menu/menu/COW004.png");
       image= Utils.loadImage("res/menu/menu/3.jpg");
       logo=Utils.loadImage("res/menu/menu/Logo.png");
       text=Utils.loadImage("res/menu/menu/text.png");
@@ -40,8 +41,9 @@ public class MenuScene implements GameScenes {
     @Override
     public void draw(Graphics graphics) {
        graphics.drawImage(image,0,0,1000,700,null);
-        graphics.drawImage(logo,300,100,400,400,null);
+        graphics.drawImage(logo,250,100,400,400,null);
         graphics.drawImage(text,150,500,700,150,null);
+        graphics.drawImage(cow,620,100,350,300,null);
     }
 
     @Override
