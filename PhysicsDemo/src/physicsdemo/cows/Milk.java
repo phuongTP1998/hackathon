@@ -65,9 +65,9 @@ public class Milk extends GameObject implements Collider {
     @Override
     public void update() {
         if (moveLeft) {
-            dx = -15;
+            dx = -10;
         } else {
-            dx = 15;
+            dx = 10;
         }
         //     if (countDown == 0) {
         if (this.gameRect.getY() <= cowNow.getY()) {
@@ -75,7 +75,7 @@ public class Milk extends GameObject implements Collider {
             dy = 0;
         }
         if (maxHeight) {
-            dy += Physics2D.GRAVITY / 2;
+            dy += Physics2D.GRAVITY;
         } else {
             dy -= 1;
         }

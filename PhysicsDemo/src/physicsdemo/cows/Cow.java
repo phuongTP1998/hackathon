@@ -201,7 +201,7 @@ public class Cow extends GameObject implements Collider {
         }
 
         if (InputManager.getInstance().isUp() && isGrounded) {
-            dy = -30;
+            dy = -20;
             soundJump = Utils.playSound("res/music/jump.wav", false);
         }
         if (!levelUp) {
@@ -227,7 +227,7 @@ public class Cow extends GameObject implements Collider {
             }
         }
         gameRect.move(dx, dy);
-        if (gameRect.getY()>700 || playerHP <= 0) {
+        if (gameRect.getY()>800 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             ControllerManager.instance.setClear(true);
             CollisionManager.instance.setClear(true);
