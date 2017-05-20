@@ -26,17 +26,25 @@ public class SecondEnemyController extends EnemyController implements Collider {
         this.setMoveBehavior(new FlyBehavior());
 
         ArrayList<Image> imagesLeft = new ArrayList<>();
-        imagesLeft.add(Utils.loadImage("res/Bat/bat-left-1.png"));
-        imagesLeft.add(Utils.loadImage("res/Bat/bat-left-2.png"));
-        imagesLeft.add(Utils.loadImage("res/Bat/bat-left-3.png"));
-        imagesLeft.add(Utils.loadImage("res/Bat/bat-left-4.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_1.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_2.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_3.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_4.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_5.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_6.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_7.png"));
+        imagesLeft.add(Utils.loadImage("res/bird/bird_left_8.png"));
         animationLeft = new Animation(imagesLeft,5,false);
 
         ArrayList<Image> imagesRight = new ArrayList<>();
-        imagesRight.add(Utils.loadImage("res/Bat/bat-right-1.png"));
-        imagesRight.add(Utils.loadImage("res/Bat/bat-right-2.png"));
-        imagesRight.add(Utils.loadImage("res/Bat/bat-right-3.png"));
-        imagesRight.add(Utils.loadImage("res/Bat/bat-right-4.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_1.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_2.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_3.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_4.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_5.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_6.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_7.png"));
+        imagesRight.add(Utils.loadImage("res/bird/bird_right_8.png"));
         animationRight = new Animation(imagesRight,5,false);
     }
 

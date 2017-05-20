@@ -40,7 +40,7 @@ public class Level1Scene implements GameScenes {
         ControllerManager.instance.add(enemyController1);
         ControllerManager.instance.add(enemyController2);
         for (int i = 3200; i <= 4000; i += 800) {
-            SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 150, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
+            SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 50, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
             ControllerManager.instance.add(secondEnemyController);
         }
 
@@ -70,7 +70,7 @@ public class Level1Scene implements GameScenes {
         new Ground(new GameRect(5400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
         new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
         image = Utils.loadImage("res/background/background1.png");
-        GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", false);
+        GameWindow.instance.clip = Utils.playSound("res/music/menu.wav", false);
     }
 
     @Override
