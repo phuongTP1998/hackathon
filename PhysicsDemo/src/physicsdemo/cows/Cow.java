@@ -231,6 +231,11 @@ public class Cow extends GameObject implements Collider {
             dx = 0;
         }
 
+        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
+        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
+            dx = 0;
+        }
+
         GameObject gameObjectRightTop = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getY());
         if (gameObjectRightTop != null && gameObjectRightTop instanceof Ground) {
             dx = 0;
@@ -238,11 +243,6 @@ public class Cow extends GameObject implements Collider {
 
         GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
         if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
-            dx = 0;
-        }
-
-        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
-        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
             dx = 0;
         }
 
@@ -287,7 +287,7 @@ public class Cow extends GameObject implements Collider {
 //        }else if(dx<0){
 //
 //        }
-        if (gameRect.getY() > 800 || playerHP <= 0) {
+        if (gameRect.getY() > 700 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             Camera.instanse.x = 0;
             ControllerManager.instance.setClear(true);
