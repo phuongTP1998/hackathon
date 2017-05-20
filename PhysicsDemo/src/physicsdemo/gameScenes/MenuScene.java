@@ -22,7 +22,7 @@ public class MenuScene implements GameScenes {
         background_2=new BackGround(1000,0,1000,700,Utils.loadImage("res/background/background2.png"));
         cow= Utils.loadImage("res/menu/menu/COW004.png");
       logo=Utils.loadImage("res/menu/menu/Logo.png");
-      text=Utils.loadImage("res/menu/menu/text.png");
+      text=Utils.loadImage("res/startext-02-02.png");
 
         GameWindow.instance.clip = Utils.playSound("res/music/menu.wav", true);
     }
@@ -46,7 +46,7 @@ public class MenuScene implements GameScenes {
         background_2.draw(graphics);
         graphics.drawImage(logo,250,100,400,400,null);
         graphics.drawImage(text,150,500,700,150,null);
-        graphics.drawImage(cow,620,100,350,300,null);
+        graphics.drawImage(cow,600,100,400,300,null);
     }
 
     @Override
