@@ -22,30 +22,26 @@ import java.util.ArrayList;
  * Created by trongphuong1011 on 5/11/2017.
  */
 public class Level1Scene implements GameScenes {
-    private Image image;
+    private Image image, image1;
+    private Animation animation;
+
     //    public static Level1Scene instance;
     public ArrayList<Milk> milks = new ArrayList<>();
     SpriteRenderer spriteRenderer = new SpriteRenderer("res/coww/cow-right-1.png");
-    public Cow cow = new Cow(new GameRect(50, 10, spriteRenderer.getImage().getWidth(null), spriteRenderer.getImage().getHeight(null)), spriteRenderer);
+    public Cow cow = new Cow(new GameRect(50, 10, spriteRenderer.getImage().getWidth(null), spriteRenderer.getImage().getHeight(null)), spriteRenderer );
 
     public Level1Scene() {
         System.out.println("Scene 1");
 //        instance = this;
-
         cow.setMilks(milks);
-        EnemyController enemyController = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
-        enemyController.setShootEnable(false);
-        ControllerManager.instance.add(enemyController);
-
-        for (int i = 3800; i <= 4700; i += 900) {
+        EnemyController enemyController1 = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        EnemyController enemyController2 = new EnemyController(new GameRect(50, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        enemyController1.setShootEnable(false);
+        ControllerManager.instance.add(enemyController1);
+        ControllerManager.instance.add(enemyController2);
+        for (int i = 3200; i <= 4000; i += 800) {
             SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 150, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
             ControllerManager.instance.add(secondEnemyController);
-        }
-
-        for (int i = 2350; i <= 2800; i += 450) {
-            EnemyController enemyController1 = new EnemyController(new GameRect(i, 0, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
-            enemyController1.setShootEnable(false);
-            ControllerManager.instance.add(enemyController1);
         }
 
         new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
@@ -87,6 +83,5 @@ public class Level1Scene implements GameScenes {
 
     @Override
     public void update() {
-
     }
 }
