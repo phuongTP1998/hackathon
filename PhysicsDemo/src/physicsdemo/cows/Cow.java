@@ -41,7 +41,7 @@ public class Cow extends GameObject implements Collider {
     int countDownForShoot = 10;
     protected boolean levelUp = false;
     private Clip soundJump, soundFight;
-    private Image hp1, hp2;
+    private Image hp1, hp2, avatar;
     private boolean isLeft = false;
 
     public Cow(GameRect gameRect, SpriteRenderer spriteRenderer) {
@@ -96,6 +96,7 @@ public class Cow extends GameObject implements Collider {
         ControllerManager.instance.add(this);
         hp2 = Utils.loadImage("res/hp2.png");
         hp1 = Utils.loadImage("res/hp1.png");
+        avatar= Utils.loadImage("res/avatar.png");
     }
 
     public void setMilks(ArrayList<Milk> milks) {
@@ -149,37 +150,37 @@ public class Cow extends GameObject implements Collider {
             }
         }
 
-
-        graphics.drawImage(hp2, 50, 50, 100, 20, null);
+        graphics.drawImage(avatar,30,50,50,50,null);
+        graphics.drawImage(hp2, 80, 65, 100, 20, null);
         if (playerHP == 10) {
-            graphics.drawImage(hp1, 50, 50, 100, 20, null);
+            graphics.drawImage(hp1, 80, 65, 100, 20, null);
         }
         if (playerHP == 9) {
-            graphics.drawImage(hp1, 50, 50, 90, 20, null);
+            graphics.drawImage(hp1, 80, 65, 90, 20, null);
         }
         if (playerHP == 8) {
-            graphics.drawImage(hp1, 50, 50, 80, 20, null);
+            graphics.drawImage(hp1, 80, 65, 80, 20, null);
         }
         if (playerHP == 7) {
-            graphics.drawImage(hp1, 50, 50, 70, 20, null);
+            graphics.drawImage(hp1, 80, 65, 70, 20, null);
         }
         if (playerHP == 6) {
-            graphics.drawImage(hp1, 50, 50, 60, 20, null);
+            graphics.drawImage(hp1, 80, 65, 60, 20, null);
         }
         if (playerHP == 5) {
-            graphics.drawImage(hp1, 50, 50, 50, 20, null);
+            graphics.drawImage(hp1, 80, 65, 50, 20, null);
         }
         if (playerHP == 4) {
-            graphics.drawImage(hp1, 50, 50, 40, 20, null);
+            graphics.drawImage(hp1, 80, 65, 40, 20, null);
         }
         if (playerHP == 3) {
-            graphics.drawImage(hp1, 50, 50, 30, 20, null);
+            graphics.drawImage(hp1, 80, 65, 30, 20, null);
         }
         if (playerHP == 2) {
-            graphics.drawImage(hp1, 50, 50, 20, 20, null);
+            graphics.drawImage(hp1, 80, 50, 20, 20, null);
         }
         if (playerHP == 1) {
-            graphics.drawImage(hp1, 50, 50, 10, 20, null);
+            graphics.drawImage(hp1, 80, 50, 10, 20, null);
         }
     }
 
