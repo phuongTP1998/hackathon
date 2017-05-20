@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ba278ca-81e0-4870-8098-20560978db1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/controller/LeftRightBehavior.java" afterPath="$PROJECT_DIR$/src/physicsdemo/controller/LeftRightBehavior.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" afterPath="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" afterPath="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,17 +24,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoseScene.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoseScene.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+            <state relative-caret-position="204">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physicsdemo/cows/Cow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
@@ -248,12 +246,12 @@
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/SecondEnemyController.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/enemies/EnemyController.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/MenuScene.java" />
-        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/obstacles/Ground.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/BackGround.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/controller/LeftRightBehavior.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/Level1Scene.java" />
         <option value="$PROJECT_DIR$/src/physicsdemo/cows/Cow.java" />
+        <option value="$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java" />
       </list>
     </option>
   </component>
@@ -913,7 +911,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107571000" />
+    <option name="totallyTimeSpent" value="107717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1211,14 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="85" lean-forward="false" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/physicsdemo/GameWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1328,6 +1318,14 @@
             <element signature="e#4316#4317#0" expanded="true" />
             <element signature="e#4354#4355#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physicsdemo/gameScenes/LoseScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
