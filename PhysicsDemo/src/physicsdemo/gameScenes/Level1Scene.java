@@ -34,6 +34,10 @@ public class Level1Scene implements GameScenes {
 //        instance = this;
         cow.setMilks(milks);
 
+        new Ground(new GameRect(100, 100, 50, 50), new SpriteRenderer("res/button/left-button.png"), null);
+        new Ground(new GameRect(200, 100, 50, 50), new SpriteRenderer("res/button/right-button.png"), null);
+        new Ground(new GameRect(150, 100, 50, 50), new SpriteRenderer("res/button/up-button.png"), null);
+        new Ground(new GameRect(150, 150, 50, 50), new SpriteRenderer("res/button/space-button.png"), null);
 
         new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
         new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
