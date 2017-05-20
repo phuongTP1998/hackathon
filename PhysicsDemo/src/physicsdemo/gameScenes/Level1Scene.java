@@ -46,7 +46,7 @@ public class Level1Scene implements GameScenes {
 
         for (int i = 2350; i <= 2800; i += 450) {
             System.out.println("x");
-            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
+            EnemyController enemyController = new EnemyController(new GameRect(i, 0, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
             enemyController.setShootEnable(false);
             ControllerManager.instance.add(enemyController);
         }
