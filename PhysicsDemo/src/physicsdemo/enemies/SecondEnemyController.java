@@ -34,7 +34,7 @@ public class SecondEnemyController extends EnemyController implements Collider {
         imagesLeft.add(Utils.loadImage("res/bird/bird_left_6.png"));
         imagesLeft.add(Utils.loadImage("res/bird/bird_left_7.png"));
         imagesLeft.add(Utils.loadImage("res/bird/bird_left_8.png"));
-        animationLeft = new Animation(imagesLeft,5,false);
+        animationLeft = new Animation(imagesLeft,10,false);
 
         ArrayList<Image> imagesRight = new ArrayList<>();
         imagesRight.add(Utils.loadImage("res/bird/bird_right_1.png"));
@@ -45,7 +45,7 @@ public class SecondEnemyController extends EnemyController implements Collider {
         imagesRight.add(Utils.loadImage("res/bird/bird_right_6.png"));
         imagesRight.add(Utils.loadImage("res/bird/bird_right_7.png"));
         imagesRight.add(Utils.loadImage("res/bird/bird_right_8.png"));
-        animationRight = new Animation(imagesRight,5,false);
+        animationRight = new Animation(imagesRight,10,false);
     }
 
     public void shooting() {
@@ -80,7 +80,7 @@ public class SecondEnemyController extends EnemyController implements Collider {
         if (gameRect.getX() <= initPosX) {
             dx = 2;
             isLeft = false;
-        } else if (gameRect.getX() >= initPosX + 150) {
+        } else if (gameRect.getX() >= initPosX + 300) {
             dx = -2;
             isLeft = true;
         }

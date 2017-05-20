@@ -47,14 +47,14 @@ public class EnemyController extends GameObject implements Collider {
         imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-2.png"));
         imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-3.png"));
         imagesLeft.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-left-4.png"));
-        animationLeft = new Animation(imagesLeft,5,false);
+        animationLeft = new Animation(imagesLeft,10,false);
 
         ArrayList<Image> imagesRight = new ArrayList<>();
         imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-1.png"));
         imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-2.png"));
         imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-3.png"));
         imagesRight.add(Utils.loadImage("res/Dragon-Scaled/Minh/run-right-4.png"));
-        animationRight = new Animation(imagesRight,5,false);
+        animationRight = new Animation(imagesRight,10,false);
     }
 
     public void setShootEnable(boolean shootEnable) {
