@@ -34,7 +34,7 @@ public class Level1Scene implements GameScenes {
         System.out.println("Scene 1");
 //        instance = this;
         cow.setMilks(milks);
-        EnemyController enemyController1 = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        EnemyController enemyController1 = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
         EnemyController enemyController2 = new EnemyController(new GameRect(50, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
         enemyController1.setShootEnable(false);
         ControllerManager.instance.add(enemyController1);
@@ -46,7 +46,7 @@ public class Level1Scene implements GameScenes {
 
         for (int i = 2350; i <= 2800; i += 450) {
             System.out.println("x");
-            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+            EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
             enemyController.setShootEnable(false);
             ControllerManager.instance.add(enemyController);
         }
