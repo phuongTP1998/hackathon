@@ -34,9 +34,11 @@ public class Level1Scene implements GameScenes {
         System.out.println("Scene 1");
 //        instance = this;
         cow.setMilks(milks);
-        EnemyController enemyController = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
-        enemyController.setShootEnable(false);
-        ControllerManager.instance.add(enemyController);
+        EnemyController enemyController1 = new EnemyController(new GameRect(900, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        EnemyController enemyController2 = new EnemyController(new GameRect(50, 10, 50, 50), new SpriteRenderer("res/Minh/run-left-3.png"));
+        enemyController1.setShootEnable(false);
+        ControllerManager.instance.add(enemyController1);
+        ControllerManager.instance.add(enemyController2);
         for (int i = 3200; i <= 4000; i += 800) {
             SecondEnemyController secondEnemyController = new SecondEnemyController(new GameRect(i, 150, 50, 50), new SpriteRenderer("res/Bat/bat-left-1.png"));
             ControllerManager.instance.add(secondEnemyController);
