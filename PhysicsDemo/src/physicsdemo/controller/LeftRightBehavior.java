@@ -6,7 +6,7 @@ import physicsdemo.GameRect;
  * Created by Quang Minh on 17/05/2017.
  */
 public class LeftRightBehavior extends MoveBehavior {
-    public int deviation = 1;
+    public int deviation = 3;
 
     public int getDeviation() {
         return deviation;

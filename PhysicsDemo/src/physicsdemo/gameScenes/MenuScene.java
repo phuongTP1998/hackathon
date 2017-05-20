@@ -18,8 +18,8 @@ public class MenuScene implements GameScenes {
     private Image image, logo, text, cow;
 
     public MenuScene() {
-        background_1=new BackGround(0,0,1000,700,Utils.loadImage("res/background/background1.png"));
-        background_2=new BackGround(1000,0,1000,700,Utils.loadImage("res/background/background2.png"));
+        background_1=new BackGround(0,0,1000,700,Utils.loadImage("res/background/background1.jpg"));
+        background_2=new BackGround(1000,0,1000,700,Utils.loadImage("res/background/background2.jpg"));
         cow= Utils.loadImage("res/menu/menu/COW004.png");
       logo=Utils.loadImage("res/menu/menu/Logo.png");
       text=Utils.loadImage("res/startext-02-02.png");

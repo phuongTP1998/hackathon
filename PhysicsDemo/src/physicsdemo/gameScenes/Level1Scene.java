@@ -12,7 +12,6 @@ import physicsdemo.cows.Milk;
 import physicsdemo.enemies.EnemyController;
 import physicsdemo.enemies.SecondEnemyController;
 import physicsdemo.obstacles.Ground;
-import physicsdemo.obstacles.MilkBottle;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
 
@@ -36,6 +35,27 @@ public class Level1Scene implements GameScenes {
     public Level1Scene() {
 //        instance = this;
         cow.setMilks(milks);
+
+
+        new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
+        new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
+        new Ground(new GameRect(1120, 500, 200, 200), new SpriteRenderer("res/ground/ground111.png"), null);
+        new Ground(new GameRect(1500, 400, 150, 50), new SpriteRenderer("res/ground/ground3.png"), new LeftRightBehavior());
+        new Ground(new GameRect(1920, 600, 1400, 100), new SpriteRenderer("res/ground/ground10.png"), null);
+        new Ground(new GameRect(2200, 520, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(2650, 522, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(3100, 520, 226, 100), new SpriteRenderer("res/ground/ground11.png"), null);
+        new Ground(new GameRect(3500, 450, 150, 50), new SpriteRenderer("res/ground/ground3.png"), null);
+        new Ground(new GameRect(3700, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(3900, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4200, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4400, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4600, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(4800, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5100, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5450, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
+        new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
+        image = Utils.loadImage("res/SCREEN/background3.png");
         EnemyController enemyController1 = new EnemyController(new GameRect(900, -10, 50, 60), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
         EnemyController enemyController2 = new EnemyController(new GameRect(50, -10, 50, 60), new SpriteRenderer("res/Minh/run-left-3.png"));
         enemyController1.setShootEnable(false);
@@ -46,37 +66,11 @@ public class Level1Scene implements GameScenes {
             ControllerManager.instance.add(secondEnemyController);
         }
 
-        for (int i = 2350; i <= 2800; i += 450) {
+        for (int i = 2450; i <= 2900; i += 450) {
             EnemyController enemyController = new EnemyController(new GameRect(i, 10, 50, 50), new SpriteRenderer("res/Dragon-Scaled/Minh/run-left-1.png"));
             enemyController.setShootEnable(false);
             ControllerManager.instance.add(enemyController);
         }
-
-        new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
-        new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
-        new Ground(new GameRect(1120, 500, 200, 200), new SpriteRenderer("res/ground/ground111.png"), null);
-        new Ground(new GameRect(1500, 400, 150, 50), new SpriteRenderer("res/ground/ground3.png"), new LeftRightBehavior());
-        new Ground(new GameRect(1820, 600, 1400, 100), new SpriteRenderer("res/ground/ground10.png"), null);
-        new Ground(new GameRect(2100, 520, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(2550, 522, 230, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(3000, 520, 226, 100), new SpriteRenderer("res/ground/ground11.png"), null);
-        new Ground(new GameRect(3400, 450, 150, 50), new SpriteRenderer("res/ground/ground3.png"), null);
-        new Ground(new GameRect(3600, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(3800, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4100, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4300, 250, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4500, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(4700, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(5000, 350, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(5400, 450, 100, 50), new SpriteRenderer("res/ground/ground001.png"), null);
-        new Ground(new GameRect(5800, 500, 400, 200), new SpriteRenderer("res/ground/ground111.png"), null);
-
-        new MilkBottle(new GameRect(6000,500, 50,100),new SpriteRenderer("res/milkbottle/milkbottle.png"));
-        image = Utils.loadImage("res/SCREEN/background3.png");
-//        background_1= new BackGround(0,0,1000,700, Utils.loadImage("res/SCREEN/background3.png"));
-//        background_2= new BackGround(1000,0,1000,700, Utils.loadImage("res/SCREEN/background4.png"));
-//        background_3= new BackGround(2000,0,1000,700, Utils.loadImage("res/SCREEN/background3.png"));
-//        background_4= new BackGround(3000,0,1000,700, Utils.loadImage("res/SCREEN/background4.png"));
         GameWindow.instance.clip = Utils.playSound("res/music/level1-1.wav", true);
     }
 
@@ -92,18 +86,10 @@ public class Level1Scene implements GameScenes {
 
     @Override
     public void draw(Graphics graphics) {
-//        background_1.draw(graphics);
-//        background_2.draw(graphics);
-//        background_3.draw(graphics);
-//        background_4.draw(graphics);
         graphics.drawImage(image, 0, 0, 1000, 800, null);
     }
 
     @Override
     public void update() {
-//        background_1.update();
-//        background_2.update();
-//        background_3.update();
-//        background_4.update();
     }
 }

@@ -20,7 +20,7 @@ public class LoseScene implements GameScenes {
     private Image image;
     public LoseScene(){
         System.out.println("LOSEEEEEEEEEEEEEEEEE");
-        image= Utils.loadImage("res/SCREEN/lost-screen-02.png");
+        image= Utils.loadImage("res/SCREEN/lose-screen-03.png");
         GameWindow.instance.clip.close();
         GameWindow.instance.clip = Utils.playSound("res/music/loseSound.wav", false);
     }

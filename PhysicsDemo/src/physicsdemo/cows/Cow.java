@@ -31,10 +31,10 @@ public class Cow extends GameObject implements Collider {
     private int playerHP = 12;
     private Animation animationLeft;
     private Animation animationRight;
+    private Animation animationStayLeft;
+    private Animation animationStayRight;
     private Animation animationJumpLeft;
     private Animation animationJumpRight;
-    private Animation animationFallLeft;
-    private Animation animationFallRight;
     private int damage = 1;
     private ArrayList<Milk> milks;
     boolean moveLeft;
@@ -69,6 +69,20 @@ public class Cow extends GameObject implements Collider {
         }
         animationRight = new Animation(imagesRight);
 
+        ArrayList<Image> imagesStayRight = new ArrayList<Image>();
+        {
+            imagesStayRight.add(Utils.loadImage("res/coww/cow-right-1.png"));
+            imagesStayRight.add(Utils.loadImage("res/coww/cow-right-5.png"));
+        }
+        animationStayRight = new Animation(imagesStayRight);
+
+        ArrayList<Image> imagesStayLeft = new ArrayList<Image>();
+        {
+            imagesStayLeft.add(Utils.loadImage("res/coww/cow-left-1.png"));
+            imagesStayLeft.add(Utils.loadImage("res/coww/cow-left-5.png"));
+        }
+        animationStayLeft = new Animation(imagesStayLeft);
+
         ArrayList<Image> imagesJumpLeft = new ArrayList<Image>();
         {
             imagesJumpLeft.add(Utils.loadImage("res/coww/cow-jump-left.png"));
@@ -81,23 +95,11 @@ public class Cow extends GameObject implements Collider {
         }
         animationJumpRight = new Animation(imagesJumpRight);
 
-        ArrayList<Image> imagesFallRight = new ArrayList<Image>();
-        {
-            imagesFallRight.add(Utils.loadImage("res/coww/fall_right.png"));
-        }
-        animationFallRight = new Animation(imagesFallRight);
-
-        ArrayList<Image> imagesFallLeft = new ArrayList<Image>();
-        {
-            imagesFallLeft.add(Utils.loadImage("res/coww/fall_left.png"));
-        }
-        animationFallLeft = new Animation(imagesFallLeft);
-
         CollisionManager.instance.add(this);
         ControllerManager.instance.add(this);
         hp2 = Utils.loadImage("res/hp2.png");
         hp1 = Utils.loadImage("res/hp1.png");
-        avatar= Utils.loadImage("res/avatar.png");
+        avatar = Utils.loadImage("res/avatar.png");
     }
 
     public void setMilks(ArrayList<Milk> milks) {
@@ -137,10 +139,18 @@ public class Cow extends GameObject implements Collider {
     public void draw(Graphics graphics) {
 
         if (isGrounded) {
-            if (isLeft) {
-                animationLeft.draw(graphics, gameRect);
+            if (dx == 0) {
+                if (isLeft) {
+                    animationStayLeft.draw(graphics, gameRect);
+                } else {
+                    animationStayRight.draw(graphics, gameRect);
+                }
             } else {
-                animationRight.draw(graphics, gameRect);
+                if (isLeft) {
+                    animationLeft.draw(graphics, gameRect);
+                } else {
+                    animationRight.draw(graphics, gameRect);
+                }
             }
         } else {
 
@@ -151,7 +161,7 @@ public class Cow extends GameObject implements Collider {
             }
         }
 
-        graphics.drawImage(avatar,30,50,50,50,null);
+        graphics.drawImage(avatar, 30, 50, 50, 50, null);
         graphics.drawImage(hp2, 80, 65, 100, 20, null);
         if (playerHP == 10) {
             graphics.drawImage(hp1, 80, 65, 100, 20, null);
@@ -178,10 +188,10 @@ public class Cow extends GameObject implements Collider {
             graphics.drawImage(hp1, 80, 65, 30, 20, null);
         }
         if (playerHP == 2) {
-            graphics.drawImage(hp1, 80, 50, 20, 20, null);
+            graphics.drawImage(hp1, 80, 65, 20, 20, null);
         }
         if (playerHP == 1) {
-            graphics.drawImage(hp1, 80, 50, 10, 20, null);
+            graphics.drawImage(hp1, 80, 65, 10, 20, null);
         }
     }
 
@@ -205,7 +215,7 @@ public class Cow extends GameObject implements Collider {
             isLeft = false;
         }
 
-        if (InputManager.getInstance().isLeft() && gameRect.getX()>10) {
+        if (InputManager.getInstance().isLeft() && gameRect.getX() > 10) {
             moveLeft = true;
             dx -= 7;
             isLeft = true;
@@ -213,42 +223,90 @@ public class Cow extends GameObject implements Collider {
 
 
 // tạo que cho chú Bò
-        GameObject gameObjectCenterDown = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() +7 + dy);
-        {
-            if (gameObjectCenterDown != null && gameObjectCenterDown instanceof Ground) {
+        if (dy > 0) {
+            GameObject gameObjectBottomCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getBottom() + 7 + dy);
+            GameObject gameObjectBottomLeft = GameObject.objectAt(gameRect.getRight(), gameRect.getBottom() + 7 + dy);
+            GameObject gameObjectBottomRight = GameObject.objectAt(gameRect.getX(), gameRect.getBottom() + 7 + dy);
+            if ((gameObjectBottomCenter != null && gameObjectBottomCenter instanceof Ground)
+                    || (gameObjectBottomLeft != null && gameObjectBottomLeft instanceof Ground)
+                    || (gameObjectBottomRight != null && gameObjectBottomRight instanceof Ground)) {
                 dy = 0;
                 isGrounded = true;
-                if(gameObjectCenterDown != null && ((((Ground) gameObjectCenterDown).getMoveBehavior()) instanceof LeftRightBehavior)){
-                    int deviation = ((LeftRightBehavior)(((Ground) gameObjectCenterDown).getMoveBehavior())).getDeviation();
+                if (gameObjectBottomCenter != null && ((((Ground) gameObjectBottomCenter).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomCenter).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                } else if (gameObjectBottomLeft != null && ((((Ground) gameObjectBottomLeft).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomLeft).getMoveBehavior())).getDeviation();
+                    gameRect.move(deviation, 0);
+                    Camera.instanse.x += deviation;
+                } else if (gameObjectBottomRight != null && ((((Ground) gameObjectBottomRight).getMoveBehavior()) instanceof LeftRightBehavior)) {
+                    int deviation = ((LeftRightBehavior) (((Ground) gameObjectBottomRight).getMoveBehavior())).getDeviation();
                     gameRect.move(deviation, 0);
                     Camera.instanse.x += deviation;
                 }
             }
-        }
-        GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
-        if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
-            dx = 0;
-        }
-
-        GameObject gameObjectRightTop = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getY());
-        if (gameObjectRightTop != null && gameObjectRightTop instanceof Ground) {
-            dx = 0;
-        }
-
-        GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
-        if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
-            dx = 0;
+        } else {
+            GameObject gameObjectTopCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
+            GameObject gameObjectTopLeft = GameObject.objectAt(gameRect.getRight(), gameRect.getY() + dy);
+            GameObject gameObjectTopRight = GameObject.objectAt(gameRect.getX(), gameRect.getY() + dy);
+            if ((gameObjectTopCenter != null && gameObjectTopCenter instanceof Ground)
+                    || (gameObjectTopLeft != null && gameObjectTopLeft instanceof Ground)
+                    || (gameObjectTopRight != null && gameObjectTopRight instanceof Ground)) {
+                dy = 0;
+            }
         }
 
-        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
-        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
-            dx = 0;
+
+        if (dx > 0) {
+            GameObject gameObjectRightTop = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getY());
+            if (gameObjectRightTop != null && gameObjectRightTop instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectRightMid = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getCenterY());
+            if (gameObjectRightMid != null && gameObjectRightMid instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
+            if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
+                dx = 0;
+            }
+        } else {
+            GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
+            if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectLeftMid = GameObject.objectAt(gameRect.getX() + dx, gameRect.getCenterY());
+            if (gameObjectLeftMid != null && gameObjectLeftMid instanceof Ground) {
+                dx = 0;
+            }
+            GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
+            if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
+                dx = 0;
+            }
         }
 
-        GameObject gameObjectUpCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
-        if (gameObjectUpCenter != null && gameObjectUpCenter instanceof Ground) {
-            dy = 0;
-        }
+
+//        GameObject gameObjectRightBottom = GameObject.objectAt(gameRect.getRight() + dx, gameRect.getBottom());
+//        if (gameObjectRightBottom != null && gameObjectRightBottom instanceof Ground) {
+//            dx = 0;
+//        }
+
+//        GameObject gameObjectLeftBottom = GameObject.objectAt(gameRect.getX() + dx, gameRect.getBottom());
+//        if (gameObjectLeftBottom != null && gameObjectLeftBottom instanceof Ground) {
+//            dx = 0;
+//        }
+
+
+//        GameObject gameObjectLeftTop = GameObject.objectAt(gameRect.getX() + dx, gameRect.getY());
+//        if (gameObjectLeftTop != null && gameObjectLeftTop instanceof Ground) {
+//            dx = 0;
+//        }
+
+//        GameObject gameObjectUpCenter = GameObject.objectAt(gameRect.getCenterX(), gameRect.getY() + dy);
+//        if (gameObjectUpCenter != null && gameObjectUpCenter instanceof Ground) {
+//            dy = 0;
+//        }
 
         // chỉnh camera stop 2 đầu Map
         if (gameRect.getX() > 500 && gameRect.getX() < 5600) {
@@ -286,7 +344,7 @@ public class Cow extends GameObject implements Collider {
 //        }else if(dx<0){
 //
 //        }
-        if (gameRect.getY() > 800 || playerHP <= 0) {
+        if (gameRect.getY() > 700 || playerHP <= 0) {
             GameWindow.instance.setCurrentScene(new LoseScene());
             Camera.instanse.x = 0;
             ControllerManager.instance.setClear(true);
