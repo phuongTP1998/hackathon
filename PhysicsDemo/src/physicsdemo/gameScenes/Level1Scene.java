@@ -14,6 +14,7 @@ import physicsdemo.obstacles.Ground;
 import physicsdemo.utils.Utils;
 import physicsdemo.view.Animation;
 
+import javax.rmi.CORBA.Util;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
  * Created by trongphuong1011 on 5/11/2017.
  */
 public class Level1Scene implements GameScenes {
-    private Image image, image1;
+    private Image image;
     private Animation animation;
 
     //    public static Level1Scene instance;
@@ -48,6 +49,10 @@ public class Level1Scene implements GameScenes {
             enemyController.setShootEnable(false);
             ControllerManager.instance.add(enemyController);
         }
+        new Ground(new GameRect(100, 100, 50, 50), new SpriteRenderer("res/button/left-button.png"), null);
+        new Ground(new GameRect(200, 100, 50, 50), new SpriteRenderer("res/button/right-button.png"), null);
+        new Ground(new GameRect(150, 100, 50, 50), new SpriteRenderer("res/button/up-button.png"), null);
+        new Ground(new GameRect(150, 150, 50, 50), new SpriteRenderer("res/button/space-button.png"), null);
 
         new Ground(new GameRect(0, 600, 770, 100), new SpriteRenderer("res/ground/ground0.png"), null);
         new Ground(new GameRect(900, 600, 400, 100), new SpriteRenderer("res/ground/ground01.png"), null);
